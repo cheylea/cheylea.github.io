@@ -1,0 +1,165 @@
+/* Stylesheet for Personal website
+––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+
+/* Contents
+––––––––––––––––––––––––––––––––––––––––––––––––––--------------------*/
+/*
+1. Reset default margins, padding and borders
+2. Styling for the overall body of website
+3. Styling for the header portion of website
+4. Styling for the Navigation Bar of website
+5. Place the main and right hand side content next to each other
+6. Styling for main content of the website
+7. Styling for any right hand side content of the website
+8. Styling for the footer of website
+*/
+
+/* 1. Reset default margins, padding and borders
+––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 2. Styling for the overall body of website
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+  body {
+    /*background-image: url('../images/background.png'); /* Add background image for tiling */
+    background-color: #0F1020;
+    font-family: "Consolas", Arial, sans-serif;  /* Set standard font for entire website */
+  }
+  
+  /* 3. Styling for the header portion of the homepage of the website
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+  .header { /* Sets the standard padding, background and text colours and aligns the text left */
+    padding: 1%;
+    color: #D3CDD7;
+    text-align: center;
+    margin-top: 12%;
+  }
+  
+  .header h1 { /* Sets the standard padding, background and text colours and aligns the text left */
+    font-size: 180px;
+  }
+
+  .header p { /* Sets the standard padding, background and text colours and aligns the text left */
+    font-size: 40px;
+    padding: 2%;
+  }
+  
+  /* 4. Styling for the Navigation Bar of website
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+  .nav { /* Sets the background colours and fixes the size and padding of the nav bar */
+    background-color: #533745;
+    height: 40px; 
+    padding: 10px;
+    font-size: 20px;
+  }
+  .nav ul { /* Positions and sets the text colour for the navigation links */
+    color: #ffcce0;
+    list-style-type: none; /* Removes bullet point symbol */
+    padding: 0;
+    margin-left: 1%;
+    margin-right: 15%;
+  }
+  .nav ul li { 
+    float: left; /* Puts list items horizontal */
+    margin-right: 2%; /* Spaces out the list items */
+  }
+  .nav a { /* Sets the text colour for a link */
+    color: #ffcce0;
+  }
+  .nav a:hover { /* Changes the text colour when the link hovers over */
+    color: #AB4E68;
+  }
+  
+  
+  /* 6. Styling for main content of the website
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+  .main { /* Sets the background and text colours, aligns text to the left and adds padding */
+    color: #D3CDD7;
+    text-align: left;
+    padding: 10%;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main a { /* Sets the text colour for a link */
+    color: #C1E0F7;
+  }
+  .main a:hover { /* Changes the text colour when the link hovers over */
+    color: #208AAE;
+  }
+  .main ul {
+    list-style-position: outside; /* Stops text wrapping under symbol */
+    margin-left: 2%; /* Lines up the list with other text */
+    list-style-type: square;
+  }
+  .main li { /* Adds more space around each list item */
+    padding: 0.5%;
+    margin-left: 2%;
+  }
+  .main h1 { /* Set font size */
+    font-size: 100px;
+    color: #C1E0F7;
+  }
+
+  .main h2 { /* Set font size */
+    font-size: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #C1E0F7
+  }
+  
+  .main p { /* Set padding for paragraph*/
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 10%;
+    color: #D3CDD7
+  }
+
+  .main img { /* Sets the positioning of an image in the main content */
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* 7. Styling for any right hand side content of the website
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+  .right {
+    flex: 40%; /* Set the percetange width of the row that is to be the right hand side content */
+    justify-content: center;
+    background-color: #208AAE;
+  }
+  .right img { /* Sets the positioning of an image in the right hand side content */
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+  
+  
+  
+  /* 8. Styling for the footer of website
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .footer { /* Sets the background colours, aligns text to the right and sets the dimensions of the footer */
+    width: 100%; /* Allows footer to appear across entire screen */
+    text-align: right;
+    background-color: #EFBCD5;
+    font-family: "Consolas";
+    position: fixed;
+    bottom: 0;
+  }
+  .footer p { /* Sets the text colour and size of a paragraph and adds padding in order to position */
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-right: 15%;
+    color: #0F1020;
+    font-size: 16px;
+  
+  }
+  .footer a { /* Sets the text colour for a link */
+    color: #0F1020;
+  }
+  .footer a:hover { /* Changes the text colour when the link hovers over */
+    color: #AB4E68;
+  }
