@@ -27,35 +27,68 @@
   
 </head>
 <body>
-  <!-- img src="{{ url_for('static', filename='images/background.png') }}" alt="network style background">-->
-  <!-- Primary Page Layout
+  <!-- Header Page
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% block content %}
     <div class="header">
       <h1>Cheylea Hopkinson</h1>
       <p>Principal Data Analyst based in Southampton, England.</p> 
     </div>
 
     <div class="icons">
-      <img src="../static/images/icon1.png" alt="Icon for Data and Business Analyst">
-      <p>Data and Business Analyst</p> 
-      <img src="../static/images/icon2.png" alt="Icon for Power BI Specialist">
-      <p>Power BI Specialist</p> 
-      <img src="../static/images/icon3.png" alt="Icon for MSci Computer Science Student">
-      <p>MSci Computer Science Student</p>
+      <li>
+        <img src="../static/images/icon1.png" alt="Icon for Data and Business Analyst">
+        <p>Data and Business Analyst</p>
+      </li>
+      <li>
+        <img src="../static/images/icon2.png" alt="Icon for Power BI Specialist">
+        <p>Power BI Specialist</p> 
+      </li>
+      <li>
+        <img src="../static/images/icon3.png" alt="Icon for MSci Computer Science Student">
+        <p>MSci Computer Science Student</p>
+      </li>
     </div>
-  {% endblock content %}
 
-  <div class="nav">
+  <!-- About Me
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="main">
+    <h1 id="about">About</h1>
+    <img src="../static/images/profilepicture.jpg" alt="Profile picture of Cheylea Hopkinson">
+    <p>I am a Principal Data Analyst currently working for Southampton City Council within the Adult Social Care domain.</p>
+    <p>My specialty is shaping and growing company-wide reporting to promote driving business decision using an evidence based approach.</p>
+    <p>I am a voracious learner, from self teaching many of my technical skills to now currently studying a Masters degree in Computer Science at the University of Liverpool to learn about software development from within as well as delve deeper into the world of Artificial Intelligence.</p>
+
+    <h2>Technologies</h2>
     <ul>
-      <li><a href="http://127.0.0.1:8000/">Home</a></li>
-      <li><a href="http://127.0.0.1:8000/about">About</a></li>
-      <li>Experience</li>
-      <li>Projects</li>
-      <li>Blog</li>
+        <li>Excel and Power Query</li>
+        <li>Microsoft Power BI</li>
+        <li>SQL and MS SQL Server</li>
+    </ul>
+    <ul>
+        <li>Python and R</li>
+        <li>Extract, Load and Transform</li>
+        <li>Modelling Data</li>
     </ul>
   </div>
-<!-- Page Footer -->
+  <div class="main">
+    
+  </div>
+
+  <!-- Naviagation Bar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="nav">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </div>
+
+
+<!-- Footer
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="footer">
   <!-- Add footer text with link -->
     <p>All rights reserved © Cheylea Hopkinson 2022. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/">LinkedIn</a>.</p>
