@@ -1,140 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
- <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Cheylea Hopkinson</title>
-  <meta name="description" content="Home page for personal website of Cheylea Hopkinson">
-  <meta name="author" content="Cheylea Hopkinson">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
-  <link rel="stylesheet" href="static/css/stylesheet.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
-  <link rel="icon" type="image/png" href="static/images/favicon.png">
-
-</head>
-<body>
-  <!-- Home Page (Splash Page)
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <div class="home">
-      <h1>Cheylea Hopkinson</h1>
-      <p>Principal Data Analyst based in Southampton, England.</p> 
-
-      <div class="icons">
-        <li>
-          <img src="static/images/icon1.png" alt="Icon for Data and Business Analyst">
-          <p>Data and Business Analyst</p>
-        </li>
-        <li>
-          <img src="static/images/icon2.png" alt="Icon for Power BI Specialist">
-          <p>Power BI Specialist</p> 
-        </li>
-        <li>
-          <img src="static/images/icon3.png" alt="Icon for MSci Computer Science Student">
-          <p>MSci Computer Science Student</p>
-        </li>
+   <head>
+      <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta charset="utf-8">
+      <title>Cheylea Hopkinson</title>
+      <meta name="description" content="Home page for personal website of Cheylea Hopkinson">
+      <meta name="author" content="Cheylea Hopkinson">
+      <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+      <link rel="stylesheet" href="static/css/stylesheet.css">
+      <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+      <link rel="icon" type="image/png" href="static/images/favicon.png">
+   </head>
+   <body>
+      <!-- Home Page (Splash Page)
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="home">
+         <h1>Cheylea Hopkinson</h1>
+         <p>Principal Data Analyst based in Southampton, England.</p>
+         <div class="icons">
+            <li>
+               <img src="static/images/icon1.png" alt="Icon for Data and Business Analyst">
+               <p>Data and Business Analyst</p>
+            </li>
+            <li>
+               <img src="static/images/icon2.png" alt="Icon for Power BI Specialist">
+               <p>Power BI Specialist</p>
+            </li>
+            <li>
+               <img src="static/images/icon3.png" alt="Icon for MSci Computer Science Student">
+               <p>MSci Computer Science Student</p>
+            </li>
+            
+         </div>
+         <br>
+         <br>
+         <br>
+            <div class="icons">
+               <a href="#about"><div class="arrow"><img src="static/images/downward-arrow.png" alt="Move to next section"></a>
+            </div>
+            </div>
+         <br>
       </div>
-    </div>
+      <br>
+      <br>
+      <br>
+      <!-- About Me
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="main">
+         <h1 id="about">About</h1>
+         <img src="static/images/profilepicture.jpg" alt="Profile picture of Cheylea Hopkinson" >
+         <p>Cheylea is a Principal Data Analyst for Adult Social Care at Southampton City Council, running a team of analysts to deliver reporting requirements and statutory returns.</p>
+         <p>Her specialty is shaping and growing company-wide reporting to drive business decision using an evidence based data approach and working with stakeholders to understand what type of evidence can aid this.</p>
+         <p>She is passionate about always learning, from self teaching many of her technical skills to now currently studying a Masters degree in Computer Science at the University of Liverpool to formalise her software development and delve deeper into the world of Artificial Intelligence.</p>
+         <p>For her undergraduate degree, she was most interested in number theory, algorithms and statistics and uses these concepts to feed into her day to day career.</p>
+         <p>She is an avid musician, self described as "playing a lot of instruments badly" and running choirs in both university and prior to 2020 in her local community.</p>
+         <h2>Technologies</h2>
+         <ul>
+            <li>Excel and Power Query</li>
+            <li>Microsoft Power BI</li>
+            <li>SQL and MS SQL Server</li>
+         </ul>
+         <ul>
+            <li>Python and R</li>
+            <li>Extract, Load and Transform</li>
+            <li>Modelling Data</li>
+         </ul>
+         <br>
+         <br>
+         <br>
+            <div class="icons">
+               <a href="#experience"><div class="arrow"><img src="static/images/downward-arrow.png" alt="Move to next section"></a>
+            </div>
+            </div>
+         <br>
+      </div>
+      <br>
+      <br>
+      <br>
+      <!-- Experience
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="main">
+         <h1 id="experience">History</h1>
+         <div class="experience">
+            <p>Click below to see experience and work history from different employers.</p>
+            <br>
+            <ul>
+               <li style = "padding-top: 2.5%"><a href="#scc">Southampton City Council</a></li>
+               <li><a href="#liv">University of Liverpool</a></li>
+               <li><a href="#tando">Tando</a></li>
+               <li><a href="#cl">ClearLoans</a></li>
+               <li><a href="#onefeed">OneFeed</a></li>
+               <li><a href="#roho">Royal Holloway, UOL</a></li>
+            </ul>
+            <!--<div class="line"></div>-->
+            <div id="scc">
+               <p>Business partner to adult social care, managing a team of three to delivery data insight to the wider business. Responsibilities include building within the social care Data Mart, producing Power BI dashboards for across the business, advising on business process requirements for accurate data capture to power statutory returns. </p>
+               <p>Working on a long term Data Migration project to upgrade the Client Management System for the Social Care workstreams, with a focus on Adult Social Care requirements. This involves working with a multitude of stakeholders including consultants, data analysts, project managers, developers and more.</p>
+            </div>
+            <div id="liv">
+               <h4>Liverpool experience</h4>
+            </div>
+            <div id="tando">
+               <p>Product manager and lead for the 5-person tech team. Took this role in addition to my existing Data Analyst role.</p>
+               <p>My role as Data Analyst primarily was building and managing business-wide reporting for stakeholders to create visibility across channels (SQL, Power Query and Power BI).</p>
+               <p>My Project Manager role involved writing up technical specifications for projects, translating to business requirements required by the business, and working directly with developers to execute them, often with very fast turnarounds, working across several time zones.</p>
+            </div>
+            <div id="cl">
+               <p>ClearLoans experience</p>
+            </div>
+            <div id="onefeed">
+               <p>Onefeed Experience</p>
+            </div>
+            <div id="roho">
+               <p>Royal Holloway Experience</p>
+            </div>
+         </div>
+         <br>
+         <br>
+         <br>
+         <p style="text-align: center"><button class="button"><a href="https://drive.google.com/uc?id=1_wi6lbwFjK8RFvjIa_xg0jR1wcvbbe5-&export=download" style="color: #0F1020; font-weight:bold">Click here to Download CV</a></button></p>
+         <br>
+         <br>
+         <br>
+            <div class="icons">
+               <a href="#projects"><div class="arrow"><img src="static/images/downward-arrow.png" alt="Move to next section"></a>
+            </div>
+            </div>
+         <br>
+      </div>
+      <br>
+      <br>
+      <br>
+   
+      <!-- Projects
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="main">
+        <h1 id="projects">Projects</h1>
+        <div class="img__wrap">
+         <a href="https://github.com/cheylea/basic-client-server" title="Client Server Project">
+         <img src="static/images/clientserver-project.png" alt="Github link to Client Server project">
+         </a>
+         <p class="img__description">Github link to Client Server project</p>
+       </div>
+        <a href="https://github.com/cheylea/course-registration" title="Course Registration"><img src="static/images/courseregistrations-project.png" alt="Github link to Course Registration project"></a>
+        <a href="https://github.com/cheylea/diagnose-virus" title="Diagnosing the Virus"><img src="static/images/diagnosevirus-project.png" alt="Github link to Diagnose Virus project"></a>
+      </div>
 
-    
-
-  <!-- About Me
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="main">
-    <h1 id="about">About Cheylea</h1>
-    <img src="static/images/profilepicture.jpg" alt="Profile picture of Cheylea Hopkinson">
-    <p>Cheylea is a Principal Data Analyst for Adult Social Care at Southampton City Council, running a team of analysts to deliver reporting requirements and statutory returns.</p>
-    <p>Her specialty is shaping and growing company-wide reporting to drive business decision using an evidence based data approach and working with stakeholders to understand what type of evidence can aid this.</p>
-    <p>She is passionate about always learning, from self teaching many of her technical skills to now currently studying a Masters degree in Computer Science at the University of Liverpool to formalise her software development and delve deeper into the world of Artificial Intelligence.</p>
-    <p>For her undergraduate degree, she was most interested in number theory, algorithms and statistics and uses these concepts to feed into her day to day career.</p>
-    <p>She is an avid musician, self described as "playing a lot of instruments badly" and running choirs in both university and prior to 2020 in her local community.</p>
-
-    <h2>Technologies</h2>
-    <ul>
-        <li>Excel and Power Query</li>
-        <li>Microsoft Power BI</li>
-        <li>SQL and MS SQL Server</li>
-    </ul>
-    <ul>
-        <li>Python and R</li>
-        <li>Extract, Load and Transform</li>
-        <li>Modelling Data</li>
-    </ul>
-  </div>
-
-  <!-- Experience
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="main">
-    <h1 id="experience">Experience</h1>
-  <div class="experience">
-    <ul>
-      <li><a href="#scc">Southampton City Council</a></li>   
-      <li><a href="#liv">University of Liverpool</a></li>
-      <li><a href="#tando">Tando</a></li>
-      <li><a href="#cl">ClearLoans</a></li>
-      <li><a href="#onefeed">OneFeed</a></li>
-      <li><a href="#roho">Royal Holloway, UOL</a></li>
-    </ul>
-
-    <div id="scc">
-      <p>Business partner to adult social care, managing a team of three to delivery data insight to the wider business. Responsibilities include building within the social care Data Mart, producing Power BI dashboards for across the business, advising on business process requirements for accurate data capture to power statutory returns. </p>
-      <p>Working on a long term Data Migration project to upgrade the Client Management System for the Social Care workstreams, with a focus on Adult Social Care requirements. This involves working with a multitude of stakeholders including consultants, data analysts, project managers, developers and more.</p>
-    </div>
-
-    <div id="liv">
-      <h4>Liverpool experience</h4>
-    </div>
-
-    <div id="tando">
-      <p>Product manager and lead for the 5-person tech team. Took this role in addition to my existing Data Analyst role.</p>
-      <p>My role as Data Analyst primarily was building and managing business-wide reporting for stakeholders to create visibility across channels (SQL, Power Query and Power BI).</p>
-      <p>My Project Manager role involved writing up technical specifications for projects, translating to business requirements required by the business, and working directly with developers to execute them, often with very fast turnarounds, working across several time zones.</p>
-    </div>
-
-    <div id="cl">
-      <p>ClearLoans experience</p>
-    </div>
-
-    <div id="onefeed">
-      <p>Onefeed Experience</p>
-    </div>
-
-    <div id="roho">
-      <p>Royal Holloway Experience</p>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Naviagation Bar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="nav">
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-    </ul>
-  </div>
-
-
-<!-- Footer
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="footer">
-  <!-- Add footer text with link -->
-    <p>All rights reserved © Cheylea Hopkinson 2022. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/">LinkedIn</a>.</p>
-  </div>
-
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+      <div class="main">
+         <a href="https://github.com/cheylea/emissions-ml" title="London Emissions Machine Learning Project"><img src="static/images/emissions-project.png" alt="Github link to Machine Learning Emissions project"></a>
+         <a href="https://github.com/cheylea/recursive-floyd" title="Recursive Floyd Warshall"><img src="static/images/floyd-project.png" alt="Github link to Recursive Floyd Warshall Algorithm project"></a>
+         <a href="https://github.com/cheylea/genetic-sudoku-solver" title="Genetic Sudoku Solver"><img src="static/images/geneticsudoku-project.png" alt="Github link to Genetic Sudoku project"></a>
+       </div>
+       <br>
+       <br>
+       <br>
+      <!-- Naviagation Bar
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="nav">
+         <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">History</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!--<li><a href="#blog">Blog</a></li>-->
+         </ul>
+      </div>
+      <!-- Footer
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="footer">
+         <!-- Add footer text with link -->
+         <p>All rights reserved © Cheylea Hopkinson 2023. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/">LinkedIn</a>.</p>
+      </div>
+      <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   </body>
 </html>
