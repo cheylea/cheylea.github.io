@@ -157,7 +157,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
   .main .button {
-    background-color: #EFBCD5; /* Green */
+    background-color: #EFBCD5; 
     border: none;
     color: #0F1020;
     padding: 15px 32px;
@@ -174,13 +174,27 @@
   
   /* Styling for the Experience Section of website
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .main .experience div {
+
+  /* Display experience blocks when the link is selected */
+  .main .tab {
+    display: none;  
+  }
+  
+  .main .default-tab {
+    display: block;
+  }
+  
+  :target~.default-tab {
     display: none;
   }
-
- .main .experience div:target {
+  
+  #scc:target~.scc,
+  #liv:target~.liv,
+  #tando:target~.tando,
+  #cl:target~.cl,
+  #onefeed:target~.onefeed,
+  #roho:target~.roho{
     display: block;
-    color: #D3CDD7;
   }
 
   .main .experience a {
@@ -192,15 +206,17 @@
     color: #D3CDD7;
   }
 
-  .main .experience ul { /* Changes the text colour when the link hovers over */
+  .main .experience ul {
     float: left;
     list-style-type: none;
     overflow: hidden;
     width: 35%;
+    text-align: right;
   }
   .main .experience ul li { 
     margin-bottom: 6%; /* Spaces out the list items */
     margin-left: 0%;
+    margin-right: 10%;
   }
 
   .main .experience ul li:target { 
@@ -224,7 +240,54 @@
   
   /* Projects button/images
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .main .container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    float: left;
+    margin-right: 25px;
+    margin-top: 10px;
+    border-radius: 50%;
+  }
+  
+  .main .image {
+    display: block;
+  }
+  
+  .main .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 350px;
+    height: 350px;
+    margin-right: 25px;
+    margin-top: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #0F1020;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.8;
+  }
+  
+  .text {
+    color: #D3CDD7;
+    font-size: 1.25vw;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
+  /*
   .main .img__wrap {
     position: relative;
     width: 350px;
@@ -240,7 +303,7 @@
     visibility: hidden;
     opacity: 0;
   
-    /* transition effect. not necessary */
+    /* transition effect. not necessary 
     transition: opacity .2s, visibility .2s;
   }
   
@@ -248,8 +311,8 @@
     visibility: visible;
     opacity: 1;
     background: #0F1020;
-  }
-  
+  } */
+
   /* Styling for the footer of website
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .footer {
