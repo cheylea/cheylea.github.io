@@ -2,290 +2,282 @@
 ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
 
 /* Contents
-––––––––––––––––––––––––––––––––––––––––––––––––––--------------------*/
+––––––––––––––––––––––––––––––––––––––––––––––––––--------------------
+1. Reset default margins, padding, and borders
+2. Styling for the overall body of the website
+3. Styling for the header portion of the homepage
+4. Styling for icons for the top of the website page
+5. Styling for the navigation bar
+6. Styling for main content of the website
+7. Download CV Button
+8. Styling for the experience portion of the website
+9. Projects button/images
+10. Styling for the footer of the website
+
+*/
 
 
-/* Reset default margins, padding and borders
-––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+/* 1. Reset default margins, padding, and borders */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  /* Styling for the overall body of website
-  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
-  body {
-    background-color: #0F1020;
-    font-family: "Consolas", Arial, sans-serif;  /* Set standard font for entire website */
-    padding-bottom: 2%; /* Ensure footer doesn't cut off content*/
-  }
-  
-  /* Styling for the header portion of the homepage of the website
-  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
-  .home {
-    padding-left: 12%;
-    padding-right: 12%;
-    color: #D3CDD7;
-    text-align: center;
-    margin-top: 10%;
-    height: 100%;
-  }
-  .home h1 { 
-    font-size: 7.5vw;
-  }
-  .home p {
-    font-size: 2vw;
-    padding: 2%;
-    padding-bottom: 3%;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-  /* Styling for icons for top of website page
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .icons {
-    color: #C1E0F7;
-    list-style-type: none;
-    border: none;
-    padding-left: 0;
-    padding-top: 0.5%;
-    display: block;
-    display: inline-flex;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: 2%;
-  }
+/* 2. Styling for the overall body of the website */
+body {
+  background-color: #0F1020;
+  font-family: "Consolas", Arial, sans-serif;
+  padding-bottom: 1%; /* Ensure footer doesn't cut off content */
+}
 
-  .icons p {
-    padding: 5%;
-    font-size: 1.25vw;
-  }
+body::after {
+  content: "";
+  background-image: url('../images/forgetmenot.jpg');
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  z-index: -1;
+}
 
-  .icons img {
-    width: 6vw;
-    height: 6vw;
-  }
+/* 3. Styling for the header portion of the homepage */
+.home {
+  padding-left: 8%;
+  padding-right: 8%;
+  color: #D3CDD7;
+  text-align: center;
+  margin-top: 30vh;
+}
+.home h1 { 
+  font-size: 6vw;
+}
+.home p {
+  font-size: 2vw;
+  padding: 1%;
+  padding-bottom: 2%;
+}
 
-  .icons .arrow img {
-    width: 3vw;
-    height: 3vw;
-  }
-  
-  /* Styling for the Navigation Bar of website
-  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
-  .nav { 
-    font-size: 1.25vw;
-    text-align: right;
-    position: fixed;
-    top: 30px;
-    right: 20px;
-  }
-  .nav ul { /* Positions and sets the text colour for the navigation links */
-    color: #C1E0F7;
-    list-style-type: none; /* Removes bullet point symbol */
-    padding: 1%;
-    
-  }
-  .nav ul li { 
-    margin-right: 3%; /* Spaces out the list items */
-  }
-  .nav a { /* Changes the text colour when the link hovers over */
-    color: #C1E0F7;
-    transition: all 0.3s ease 0.2s;
-  }
-  .nav a:hover { /* Changes the text colour when the link hovers over */
-    color: #D3CDD7;
-  }
-  
-  
-  /* Styling for main content of the website
-  ––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
-  .main { 
-    color: #D3CDD7;
-    text-align: justify;
-    padding-left: 12%;
-    padding-right: 12%;
-    font-size: 1.5vw;
-    vertical-align: middle;
-  }
-  .main a { 
-    color: #C1E0F7;
-  }
-  .main a:hover { 
-    color: #208AAE;
-  }
-  .main ul {
-    list-style-position: outside; /* Stops text wrapping under symbol */
-    margin-left: 2%; /* Lines up the list with other text */
-    list-style-type: square;
-  }
-  .main li {
-    padding: 0.5%;
-    margin-left: 2%;
-  }
-  .main h1 {
-    font-size: 6vw;
-    color: #C1E0F7;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    text-align: center;
-  }
+/* 4. Styling for icons for the top of the website page */
+.icons {
+  color: #C1E0F7;
+  list-style-type: none;
+  border: none;
+  padding-left: 0;
+  padding-top: 0.5vh;
+  display: block;
+  display: inline-flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1.5vh;
+}
+.icons p {
+  padding: 2%;
+  font-size: 1.25vw;
+}
+.icons img {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 5%;
+}
 
-  .main h2 { 
-    font-size: 30px;
-    padding-top: 3%;
-    padding-bottom: 1%;
-    color: #C1E0F7
-  }
-  
-  .main p {
-    color: #D3CDD7;
- 
-  }
+/* 5. Styling for the navigation bar */
+.nav { 
+  font-size: 1vw;
+  text-align: right;
+  position: fixed;
+  top: 2vh;
+  right: 2vw;
+}
+.nav ul { 
+  color: #C1E0F7;
+  list-style-type: none;
+  padding: 0.5%;
+}
+.nav ul li { 
+  margin-right: 2%;
+}
+.nav a {
+  color: #C1E0F7;
+  transition: all 0.3s ease 0.2s;
+}
+.nav a:hover {
+  color: #D3CDD7;
+}
 
-  .main img {
-    width: 350px;
-    height: 350px;
-    float: left;
-    margin-right: 25px;
-    margin-top: 10px;
-    border-radius: 50%
-  }
+/* 6. Styling for main content of the website */
+.main { 
+  color: #D3CDD7;
+  text-align: justify;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 1.25vw;
+  vertical-align: middle;
+}
+.main a { 
+  color: #C1E0F7;
+}
+.main a:hover { 
+  color: #208AAE;
+}
+.main ul {
+  list-style-position: outside;
+  margin-left: 1%;
+  list-style-type: none;
+  text-align: center;
+}
+.main li {
+  padding: 0.5%;
+  margin-left: 1%;
+  text-align: center;
+}
+.main h1 {
+  font-size: 4vw;
+  color: #C1E0F7;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+.main h2 { 
+  font-size: 2vw;
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  color: #C1E0F7;
+}
+.main p {
+  color: #D3CDD7;
+  overflow: hidden;
+}
+.main img {
+  width: 20vw;
+  height: 20vw;
+  float: left;
+  margin-right: 2vw;
+  margin-top: 1vh;
+  border-radius: 5%;
+}
 
-  /* Download CV Button
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 7. Download CV Button */
+.main .button {
+  background-color: #EFBCD5; 
+  border: none;
+  color: #0F1020;
+  padding: 1.5vh 3vw;
+  display: inline-block;
+  font-size: 1vw;
+  border-radius: 5%;
+  font-family: "Consolas", Arial, sans-serif;
+  align-items: center;
+}
+.main .button:hover {
+  background-color: #C1E0F7;
+}
 
-  .main .button {
-    background-color: #EFBCD5; 
-    border: none;
-    color: #0F1020;
-    padding: 15px 32px;
-    display: inline-block;
-    font-size: 1vw;
-    border-radius: 5%;
-    font-family: "Consolas", Arial, sans-serif;
-    align-items: center;
-  }
-  
-  .main .button:hover {
-    background-color: #C1E0F7;
-  }
-  
-  
-    /* Styling for the experience portion of the website
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* 8. Styling for the experience portion of the website */
+.main .experience {
+  display: flex;
+  overflow: hidden;
+}
+.main .experience-list {
+  flex: 1;
+  padding: 1.5vh;
+  text-align: left;
+}
+.main .experience-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.main .experience-list li {
+  cursor: pointer;
+  padding: 0.75vh;
+  margin-bottom: 0.75vh;
+  border-radius: 3px;
+}
+.main .experience-list li:hover {
+  background-color: #C1E0F7;
+  color: #0F1020;
+}
+.main .experience-list li.active {
+  background-color: #EFBCD5;
+  color: #0F1020;
+}
+.main .experience-body {
+  flex: 3;
+  padding-left: 2vw;
+}
 
-  .main .experience {
-      display: flex;
+/* 9. Projects button/images */
+.projects { 
+  color: #D3CDD7;
+  text-align: justify;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 1.25vw;
+  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.projects .container {
+  position: relative;
+  height: 30%;
+  margin: 1vh;
+}
+.projects .image {
+  display: block;
+  border-radius: 5%;
+}
+.projects .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0F1020;
+  border-radius: 5%;
+}
+.projects .container:hover .overlay {
+  opacity: 0.8;
+}
+.projects .text {
+  color: #D3CDD7;
+  font-size: 1vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-  }
-
-  .main .experience-list {
-      flex: 1;
-      padding: 20px;
-      text-align: left;
-  }
-
-  .main .experience-list ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-  }
-
-  .main .experience-list li {
-      cursor: pointer;
-      padding: 10px;
-      margin-bottom: 5px;
-      border-radius: 5px;
-  }
-
-  .main .experience-list li:hover {
-      background-color: #C1E0F7;
-      color: #0F1020;
-  }
-
-  .main .experience-list li.active {
-      background-color: #EFBCD5;
-      color: #0F1020;
-  }
-
-  .main .experience-body {
-      flex: 3;
-      padding-left: 30px;
-  }
-
-  /* Projects button/images
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .main .container {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    float: left;
-    margin-top: 10px;
-    border-radius: 50%;
-    scroll-margin-top: 1em;
-  }
-  
-  .main .image {
-    display: block;
-  }
-  
-  .main .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 350px;
-    height: 350px;
-    margin-top: 10px;
-    border-radius: 50%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #0F1020;
-  }
-  
-  .container:hover .overlay {
-    opacity: 0.8;
-  }
-  
-  .text {
-    color: #D3CDD7;
-    font-size: 1.25vw;
-    font-weight: bold;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  /* Styling for the footer of website
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .footer {
-    width: 100%; /* Allows footer to appear across entire screen */
-    text-align: right;
-    background-color: #EFBCD5;
-    font-family: "Consolas";
-    position: fixed;
-    bottom: 0;
-  }
-  .footer p {
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    padding-right: 1%;
-    color: #0F1020;
-    font-size: 1vw;
-  
-  }
-  .footer a {
-    color: #0F1020;
-  }
-  .footer a:hover {
-    color: #AB4E68;
-  }
+/* 10. Styling for the footer of the website */
+.footer {
+  width: 100%;
+  text-align: right;
+  background-color: #EFBCD5;
+  font-family: "Consolas";
+  position: fixed;
+  bottom: 0;
+}
+.footer p {
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  padding-right: 1vw;
+  color: #0F1020;
+  font-size: 1vw;
+}
+.footer a {
+  color: #0F1020;
+}
+.footer a:hover {
+  color: #AB4E68;
+}
