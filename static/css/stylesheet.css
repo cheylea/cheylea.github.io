@@ -13,7 +13,6 @@
 8. Styling for the experience portion of the website
 9. Projects button/images
 10. Styling for the footer of the website
-
 */
 
 
@@ -34,7 +33,7 @@ body {
 
 body::after {
   content: "";
-  background-image: url('../images/forgetmenot.jpg');
+  background-image: url('../images/forgetmenot.jpg'); /* source: https://wall.alphacoders.com/big.php?i=1273780 */
   background-size: cover;
   background-position: center;
   position: fixed;
