@@ -151,7 +151,7 @@ body::after {
 }
 .main p {
   color: #D3CDD7;
-  overflow: hidden;
+  overflow: visible;
 }
 .main img {
   width: 20vw;
