@@ -51,7 +51,7 @@ body::after {
   padding-right: 8%;
   color: #D3CDD7;
   text-align: center;
-  margin-top: 30vh;
+  margin-top: 25vh;
 }
 .home h1 { 
   font-size: 6vw;
@@ -163,7 +163,7 @@ body::after {
 }
 
 /* 7. Download CV Button */
-.main .button {
+.home .button {
   background-color: #EFBCD5; 
   border: none;
   color: #0F1020;
@@ -174,7 +174,7 @@ body::after {
   font-family: "Consolas", Arial, sans-serif;
   align-items: center;
 }
-.main .button:hover {
+.home .button:hover {
   background-color: #C1E0F7;
 }
 
@@ -195,9 +195,10 @@ body::after {
 }
 .main .experience-list li {
   cursor: pointer;
-  padding: 0.75vh;
-  margin-bottom: 0.75vh;
+  padding: 1.5vh;
+  margin-bottom: 1.5vh;
   border-radius: 3px;
+  background-color: #0F1020
 }
 .main .experience-list li:hover {
   background-color: #C1E0F7;
@@ -239,13 +240,13 @@ body::after {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0;
+  opacity: 0.8;
   transition: .5s ease;
   background-color: #0F1020;
   border-radius: 5%;
 }
 .projects .container:hover .overlay {
-  opacity: 0.8;
+  background-color: #D3CDD7;
 }
 .projects .text {
   color: #D3CDD7;
@@ -256,6 +257,10 @@ body::after {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.projects .container:hover .text{
+  color: #0F1020;
 }
 
 /* 10. Styling for the footer of the website */
