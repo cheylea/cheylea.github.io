@@ -151,7 +151,7 @@ body {
 }
 
 /* 7. Download CV Button */
-.main .button {
+.home .button {
     background-color: #EFBCD5; 
     border: none;
     color: #0F1020;
@@ -162,7 +162,7 @@ body {
     font-family: "Consolas", Arial, sans-serif;
     align-items: center;
 }
-.main .button:hover {
+.home .button:hover {
     background-color: #C1E0F7;
 }
 
