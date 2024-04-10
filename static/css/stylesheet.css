@@ -285,3 +285,55 @@ body::after {
 .footer a:hover {
   color: #AB4E68;
 }
+
+/* 6. Styling for blog content of the website */
+.blog { 
+  color: #D3CDD7;
+  text-align: justify;
+  padding-left: 12%;
+  padding-right: 12%;
+  font-size: 1.25vw;
+  vertical-align: middle;
+}
+.blog a { 
+  color: #C1E0F7;
+}
+.blog a:hover { 
+  color: #208AAE;
+}
+.blog ul {
+  list-style-position: outside;
+  margin-left: 1%;
+  list-style-type: none;
+  text-align: center;
+}
+.blog li {
+  padding: 0.5%;
+  margin-left: 1%;
+  text-align: center;
+}
+.blog h1 {
+  font-size: 4vw;
+  color: #C1E0F7;
+  padding-top: 10%;
+  padding-bottom: 1%;
+  text-align: left;
+}
+.blog h2 { 
+  font-size: 2vw;
+  padding-top: 2%;
+  padding-bottom: 0.5%;
+  color: #C1E0F7;
+}
+.blog p {
+  color: #D3CDD7;
+  overflow: visible;
+}
+.blog img {
+  width: 20vw;
+  height: 20vw;
+  float: left;
+  margin-right: 2vw;
+  margin-top: 1vh;
+  border-radius: 5%;
+}
