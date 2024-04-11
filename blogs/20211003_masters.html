@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta charset="utf-8">
+      <title>Masters Blog Week Seven - Group Projects</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Masters Blog Week Seven - Group Projects">
+      <meta name="author" content="Cheylea Hopkinson">
+      <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+      <link rel="stylesheet" href="../static/css/stylesheet.css">
+      <link rel="stylesheet" href="../static/css/mobile.css" media="screen and (max-width: 768px)">
+      <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="icon" type="image/png" href="../static/images/cheylea_favicon.png"> <!-- Favicon by IllusiveBIair https://github.com/IllusiveBIair -->
+   </head>
+   <body>
+      
+      <div class="blog">
+        <h1 style="padding-top: 10%;">Masters Blog Week Seven - Group Projects</h1>
+
+         <h2>October 3rd, 2021 7:27 AM</h2>
+         <br>
+         <br>
+         <p><i>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It's interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</i></p>
+         <p><i>This also features a reference to blockchain and how I would never want to do a piece of work on it...interesting considering how my dissertation went.</i></p>
+         <br>
+         <br>
+         <p><a href="archived\20211003.html" target="_blank">Link to original blog newsletter here.</a></p>
+         <br>
+         <br>
+      </div>
+
+      <div class="blog">
+      <h2>Leave a comment</h2>
+
+      <section id="utterances-comments"></section>
+   </div>
+
+      <!-- Naviagation Bar
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="nav">
+         <ul>
+            <li><a href="../index.html">Back to home</a></li>
+         </ul>
+      </div>
+      <!-- Footer
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="footer">
+         <!-- Add footer text with link -->
+         <p>All rights reserved © Cheylea Hopkinson 2024. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/" target="_blank">LinkedIn</a>.</p>
+      </div>
+      <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+      <!-- Comments
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+         <script>
+            'use strict';
+          
+            (function() {
+              var commentContainer = document.querySelector('#utterances-comments');
+          
+              if (!commentContainer) {
+                return;
+              }
+          
+              var script = document.createElement('script');
+              script.setAttribute('src', 'https://utteranc.es/client.js');
+              script.setAttribute('repo', 'cheylea/cheylea.github.io');
+              script.setAttribute('issue-term', 'url');
+              script.setAttribute('label', 'blog-comment');
+              script.setAttribute('theme', 'dark-blue');
+              script.setAttribute('crossorigin', 'anonymous');
+          
+              commentContainer.appendChild(script);
+            })();
+         </script>
+   </body>
+</html>
