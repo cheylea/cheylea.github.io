@@ -345,7 +345,6 @@ body::after {
 .blog img {
   width: 20vw;
   height: 20vw;
-  float: left;
   margin-right: 2vw;
   margin-top: 1vh;
   border-radius: 5%;
