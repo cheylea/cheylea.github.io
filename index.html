@@ -1,3 +1,8 @@
+---
+layout: base
+title: "Cheylea Hopkinson"
+---
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -23,7 +28,7 @@
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="home">
          <h1>Cheylea Hopkinson</h1>
-         <p>Principal Data Analyst based in Southampton, England.</p>
+         <p>Principal Data Architect based in Southampton, England.</p>
          <div class="icons">
             <li>
                <img src="static/images/icon1.png" alt="Icon for Data and Business Analyst">
@@ -206,90 +211,46 @@
       <!-- Blog
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
          <div class="main">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1 id="blog">Blog</h1>
-            <p style="text-align: center;">Sometimes I write about some of the stuff I'm working on...</p>
-            <br>
-            <ul>
-               <li style="font-size: 2vw;"><a href="#2025">2025</a></li>
-               <li style="font-size: 2vw;"><a href="#2024">2024</a></li>
-               <li style="font-size: 2vw;"><a href="#2023">2023</a></li>
-               <li style="font-size: 2vw;"><a href="#2022">2022</a></li>
-               <li style="font-size: 2vw;"><a href="#2021">2021</a></li>
-            </ul>
-            <br>
-         </div>
 
-         <div class="blog">
-            <h1 id="2025">2025</h1>
-            <h2>April</h2>
-            <br>
-            <h3>22nd April 2025</h3>
-            <h4><a href="blogs\20250422_slim_socials.html" target="_blank">Reducing phone addiction</a></h4>
-            <p>A short blog on a recent mini project to reduce my phone addiction.</p>
-            <br>
-            <br>
-            <h3>1st April 2025</h3>
-            <h4><a href="blogs\20250401_ultimateflaggle.html" target="_blank">Ultimate Flaggle...</a></h4>
-            <p>An overview of my time working on my first personal web app, ultimate flaggle...</p>
-            <br>
-            <h1 id="2024">2024</h1>
-            <h2>June</h2>
-            <br>
-            <h3>6th June 2024</h3>
-            <h4><a href="blogs\20240606_masters.html" target="_blank">My Dissertation</a></h4>
-            <p>Blog post on my Master's dissertation project.</p>
-            <br>
-            <h1 id="2023">2023</h1>
-            <p>Nothing to see here!</p>
-            <h1 id="2022">2022</h1>
-            <p>Nothing to see here!</p>
-            <h1 id="2021">2021</h1>
-            <h2>November</h2>
-            <br>
-            <h3>4th November 2021</h3>
-            <h4><a href="blogs\20211104_masters.html" target="_blank">Masters Blog Week Eleven - New Module , Who Dis?</a></h4>
-            <p>The last installment of my masters blogs, where I discuss a bit about machine learning and Python.</p>
-            <br>
-            <h2>October</h2>
-            <br>
-            <h3>23rd October 2021</h3>
-            <h4><a href="blogs\20211023_masters.html" target="_blank">Masters Blog Week Eight to Ten - Final thoughts on AI and finishing my first module</a></h4>
-            <p>Reflections after completing 8% of my degree.</p>
-            <br>
-            <h3>3rd October 2021</h3>
-            <h4><a href="blogs\20211003_masters.html" target="_blank">Masters Blog Week Seven - Group Projects</a></h4>
-            <p>Aaah the joys of group projects...</p>
-            <br>
-            <h2>September</h2>
-            <br>
-            <h3>25th September 2021</h3>
-            <h4><a href="blogs\20210925_masters.html" target="_blank">Masters Blog Week Five / Six - AI in Healthcare and Imposter Syndrome</a></h4>
-            <p>This is where we start to go downhill a little on the frequency, but this is reflected in my discussion around imposter syndrome as well.</p>
-            <br>
-            <h3>11th September 2021</h3>
-            <h4><a href="blogs\20210911_masters.html" target="_blank">Masters Blog Week Four - Seminars, Deadlines and Electronic Elections</a></h4>
-            <p>I find this blog particularly interesting as it touches on electronic voting for the first time. I definitely found the subject interesting, and later on this becomes the core for my masters dissertation project. I found it a subject to be important to talk about more, particularly to those that don't know too much about it and the risks.</p>
-            <br>
-            <h3>3rd September 2021</h3>
-            <h4><a href="blogs\20210903_masters.html" target="_blank">Masters Blog Week Three - Smart homes of the future</a></h4>
-            <p>A little overview on emerging trends in technology.</p>
-            <br>
-            <h2>August</h2>
-            <br>
-            <h3>19th August 2021</h3>
-            <h4><a href="blogs\20210819_masters.html" target="_blank">Masters Blog Week Two - How to write and sound like you know stuff</a></h4>
-            <p>Read how I battle with learning how to write my first ever essay (you don't do essays when you study maths) and a bit of Artificial Intelligence and the legal proceedings surrounding it.</p>
-            <br>
-            <h3>17th August 2021</h3>
-            <h4><a href="blogs\20210817_masters.html" target="_blank">Masters Blog Week One - Welcome back to Academia</a></h4>
-            <p>My first ever blog post when I first signed up for my masters degree...</p>
-            <br>
+            <section id="blog">
+              <h1>Blog</h1>
+                        
+              {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+              <ul class="year-nav">
+                {% for y in years %}
+                  <li><a href="#y{{ y.name }}">{{ y.name }}</a></li>
+                {% endfor %}
+              </ul>
+           
+              {% for y in years %}
+                <h2 id="y{{ y.name }}">{{ y.name }}</h2>
+           
+                {% assign current_month = "" %}
+                {% for post in y.items %}
+                  {% assign month_name = post.date | date: "%B" %}
+                  {% if month_name != current_month %}
+                    <h3>{{ month_name }}</h3>
+                    {% assign current_month = month_name %}
+                  {% endif %}
+           
+                  {% assign d = post.date | date: "%-d" | plus: 0 %}
+                  {% capture suffix %}
+                    {% if d == 11 or d == 12 or d == 13 %}
+                      th
+                    {% else %}
+                      {% assign m = d | modulo:10 %}
+                      {% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}
+                    {% endif %}
+                  {% endcapture %}
+           
+                  <h4>{{ post.date | date: "%-d" }}{{ suffix }} {{ post.date | date: "%B %Y" }}</h4>
+                  <h5><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+                  {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %}
+                {% endfor %}
+              {% endfor %}
+            </section>
+
+         
          </div>
       
       <div class="icons"><p style="text-align: center;">...you've reached the end!</p></div>

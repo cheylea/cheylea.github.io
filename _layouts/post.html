@@ -1,0 +1,22 @@
+---
+layout: base
+---
+<main class="content">
+  <article class="post">
+    <h1>{{ page.title }}</h1>
+    <p class="post-date">
+      {% assign d = page.date | date: "%-d" | plus: 0 %}
+      {% capture suffix %}
+        {% if d == 11 or d == 12 or d == 13 %}
+          th
+        {% else %}
+          {% assign m = d | modulo:10 %}
+          {% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}
+        {% endif %}
+      {% endcapture %}
+      {{ page.date | date: "%-d" }}{{ suffix }} {{ page.date | date: "%B %Y" }}
+    </p>
+    {{ content }}
+    <p><a href="/">Back to home</a></p>
+  </article>
+</main>
