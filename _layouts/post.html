@@ -17,7 +17,12 @@ layout: base
       {% endcapture %}
       {{ page.date | date: "%-d" }}{{ suffix }} {{ page.date | date: "%B %Y" }}
     </p>
-    {{ content }}
-    <p><a href="/">Back to home</a></p>
+    <div class="blog">
+      {{ content }}
+    </div>
+    <br>
+    <br
+    <p>
+      <a href="/">Back to home</a></p>
   </article>
 </main>
