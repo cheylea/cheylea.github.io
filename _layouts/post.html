@@ -4,7 +4,8 @@ layout: base
 
 <main class="content">
   <article class="blog">
-    <h1>{{ page.title }}</h1>
+    <h1 style="padding-top: 10%;">{{ page.title }}</h1>
+    <br>
     <p class="post-date">
       {% assign d = page.date | date: "%-d" | plus: 0 %}
       {% capture suffix %}
@@ -17,12 +18,15 @@ layout: base
       {% endcapture %}
       {{ page.date | date: "%-d" }}{{ suffix }} {{ page.date | date: "%B %Y" }}
     </p>
+    <br>
     <div class="blog">
       {{ content }}
     </div>
     <br>
-    <br
+    <br>
     <p>
       <a href="/">Back to home</a></p>
+
+    <p>Leave a comment</p>
   </article>
 </main>
