@@ -1,0 +1,7 @@
+title: "Cheylea Hopkinson"
+url: "https://cheylea.github.io"
+baseurl: ""     # (user site => keep empty)
+permalink: /blogs/:year:month:day_:title.html   # matches your current blog URL pattern
+timezone: Europe/London
+# No theme so your CSS controls everything
+theme: null
