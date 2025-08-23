@@ -349,3 +349,8 @@ body::after {
   margin-top: 1vh;
   border-radius: 5%;
 }
+
+.blog p img {
+    max-width: 100%;
+    height: auto;
+}
