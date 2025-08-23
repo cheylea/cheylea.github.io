@@ -216,8 +216,7 @@ title: "Cheylea Hopkinson"
                   {% assign d = post.date | date: "%-d" | plus: 0 %}
                   {% capture suffix %}{% if d == 11 or d == 12 or d == 13 %}th{% else %}{% assign m = d | modulo:10 %}{% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}{% endif %}{% endcapture %}
 
-                  <h4>{{ post.date | date: "%-d" }}{{ suffix }} {{ post.date | date: "%B %Y" }}</h4>
-                  <h5><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+                  <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%-d" }}{{ suffix }} {{ post.date | date: "%B %Y" }})</h4>
                   <!-- {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %} Not needed for now -->
                 {% endfor %}
               {% endfor %}
