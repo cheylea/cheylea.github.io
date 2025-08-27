@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Reducing phone addiction - 4 months on..."
-date: 2025-04-22 07:53:00 +0100
+date: 2025-08-27 20:19:00 +0100
 ---
 
 Back in April I posted about reducing my phone addiction and trying to find ways to reset my brain and waste less time on my phone. This post is written four months down the line, and goes through what worked, what didn't and reflections.
-[Link to the previous article here!](2025-08-27-slim_socials_revisited.md)
+[Link to the previous article here!](20250827-slim_socials_revisited.md)
 
 What has stuck
 ================
