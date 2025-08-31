@@ -13,6 +13,7 @@
 8. Styling for the experience portion of the website
 9. Projects button/images
 10. Styling for the footer of the website
+11. Aurora Title Effect
 */
 
 
@@ -25,6 +26,10 @@
 }
 
 /* 2. Styling for the overall body of the website */
+html {
+  scroll-padding-top: 80px; /* height of your navbar */
+}
+
 body {
   background-color: #0F1020;
   font-family: "Consolas", monospace, Arial, sans-serif;
@@ -87,27 +92,44 @@ body::after {
 }
 
 /* 5. Styling for the navigation bar */
-.nav { 
-  font-size: 1vw;
-  text-align: top;
+.nav {
   position: fixed;
-  top: 2vh;
-  right: 2vw;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #EFBCD5, #D37DAF, #C1E0F7); /* gradient background */
+  padding: 1vh 0;  /* vertical padding for height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  z-index: 1000;
+  font-size: 1vw;
 }
-.nav ul { 
-  color: #C1E0F7;
-  list-style-type: none;
-  padding: 0.5%;
+
+.nav ul {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.nav ul li { 
-  margin-right: 2%;
+
+.nav ul li {
+  margin: 0 2.5vw;  /* spacing between links */
 }
+
 .nav a {
-  color: #C1E0F7;
-  transition: all 0.3s ease 0.2s;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5vh 1vw; /* padding inside links for clickable area */
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
+
 .nav a:hover {
-  color: #D3CDD7;
+  background-color: rgba(255, 255, 255, 0.2); /* highlight background on hover */
+  color: #D37DAF;
+  transform: scale(1.05); /* subtle zoom effect */
 }
 
 /* 6. Styling for main content of the website */
@@ -283,7 +305,7 @@ body::after {
   color: #0F1020;
 }
 .footer a:hover {
-  color: #AB4E68;
+  color: #D37DAF;
 }
 
 /* 6. Styling for blog content of the website */
@@ -353,4 +375,201 @@ body::after {
 .blog p img {
     max-width: 100%;
     height: auto;
+}
+
+/* 11. Aurora Title Effect */
+/* Credit: https://codepen.io/ostylowany */
+
+:root {
+  --clr-1: #EFBCD5;
+  --clr-2: #C1E0F7;
+  --clr-3: #D37DAF;
+  --clr-4: #D37DAF;
+
+  --blur: 1rem;
+  --fs: clamp(3rem, 8vw, 7rem);s
+  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs);
+  font-weight: 800;
+  letter-spacing: var(--ls);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  margin: 0;
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: darken;
+  pointer-events: none;
+}
+
+.aurora__item {
+  overflow: hidden;
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background-color: var(--clr-1);
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  filter: blur(var(--blur));
+  mix-blend-mode: overlay;
+}
+
+.aurora__item:nth-of-type(1) {
+  top: -50%;
+  animation: aurora-border 12s ease-in-out infinite,
+    aurora-1 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(2) {
+  background-color: var(--clr-3);
+  right: 0;
+  top: 0;
+  animation: aurora-border 12s ease-in-out infinite,
+    aurora-2 24s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(3) {
+  background-color: var(--clr-2);
+  left: 0;
+  bottom: 0;
+  animation: aurora-border 12s ease-in-out infinite,
+    aurora-3 16s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(4) {
+  background-color: var(--clr-4);
+  right: 0;
+  bottom: -50%;
+  animation: aurora-border 12s ease-in-out infinite,
+    aurora-4 48s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-1 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  50% {
+    top: 100%;
+    right: 75%;
+  }
+
+  75% {
+    top: 100%;
+    right: 25%;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes aurora-2 {
+  0% {
+    top: -50%;
+    left: 0%;
+  }
+
+  60% {
+    top: 100%;
+    left: 75%;
+  }
+
+  85% {
+    top: 100%;
+    left: 25%;
+  }
+
+  100% {
+    top: -50%;
+    left: 0%;
+  }
+}
+
+@keyframes aurora-3 {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+
+  40% {
+    bottom: 100%;
+    left: 75%;
+  }
+
+  65% {
+    bottom: 40%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes aurora-4 {
+  0% {
+    bottom: -50%;
+    right: 0;
+  }
+
+  50% {
+    bottom: 0%;
+    right: 40%;
+  }
+
+  90% {
+    bottom: 50%;
+    right: 25%;
+  }
+
+  100% {
+    bottom: -50%;
+    right: 0;
+  }
+}
+
+@keyframes aurora-border {
+  0% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+
+  25% {
+    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+  }
+
+  50% {
+    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+  }
+
+  75% {
+    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+  }
+
+  100% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
 }

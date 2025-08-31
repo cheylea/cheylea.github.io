@@ -7,7 +7,14 @@ title: "Cheylea Hopkinson"
       <!-- Home Page (Splash Page)
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="home">
-         <h1>Cheylea Hopkinson</h1>
+         <h1 class="title">Cheylea Hopkinson
+           <div class="aurora">
+             <div class="aurora__item"></div>
+             <div class="aurora__item"></div>
+             <div class="aurora__item"></div>
+             <div class="aurora__item"></div>
+           </div>
+         </h1>
          <p>Principal Data Architect based in Southampton, England.</p>
          <div class="icons">
             <li>
@@ -196,7 +203,7 @@ title: "Cheylea Hopkinson"
               <h1>Blog</h1>
                         
               {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
-              <ul class="year-nav">
+              <ul style="text-align: left;">
                 {% for y in years %}
                   <li><a href="#y{{ y.name }}">{{ y.name }}</a></li>
                 {% endfor %}
