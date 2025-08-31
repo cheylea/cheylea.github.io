@@ -1,9 +1,24 @@
----
-layout: base
-title: "Cheylea Hopkinson"
----
-
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta charset="utf-8">
+      <title>Cheylea Hopkinson</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Blog page for personal website of Cheylea Hopkinson">
+      <meta name="author" content="Cheylea Hopkinson">
+      <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="stylesheet" href="../static/css/stylesheet.css">
+      <link rel="stylesheet" href="../static/css/mobile.css" media="screen and (max-width: 768px)">
+      <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="icon" type="image/png" href="../static/images/cheylea_favicon.png"> <!-- Favicon by IllusiveBIair https://github.com/IllusiveBIair -->
+   </head>
    <body>
+      
+         <body>
       <!-- Home Page (Splash Page)
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="home">
@@ -195,31 +210,187 @@ title: "Cheylea Hopkinson"
             <section id="blog">
               <h1>Blog</h1>
                         
-              {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+              
               <ul class="year-nav">
-                {% for y in years %}
-                  <li><a href="#y{{ y.name }}">{{ y.name }}</a></li>
-                {% endfor %}
+                
+                  <li><a href="#y2025">2025</a></li>
+                
+                  <li><a href="#y2024">2024</a></li>
+                
+                  <li><a href="#y2021">2021</a></li>
+                
               </ul>
            
-              {% for y in years %}
-                <h2 id="y{{ y.name }}">{{ y.name }}</h2>
+              
+                <h2 id="y2025">2025</h2>
            
-                {% assign current_month = "" %}
-                {% for post in y.items %}
-                  {% assign month_name = post.date | date: "%B" %}
-                  {% if month_name != current_month %}
-                    <h3>{{ month_name }}</h3>
-                    {% assign current_month = month_name %}
-                  {% endif %}
+                
+                
+                  
+                  
+                    <h3>August</h3>
+                    
+                  
            
-                  {% assign d = post.date | date: "%-d" | plus: 0 %}
-                  {% capture suffix %}{% if d == 11 or d == 12 or d == 13 %}th{% else %}{% assign m = d | modulo:10 %}{% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}{% endif %}{% endcapture %}
+                  
+                  
 
-                  <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%-d" }}{{ suffix }} {{ post.date | date: "%B %Y" }})</h4>
-                  <!-- {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %} Not needed for now -->
-                {% endfor %}
-              {% endfor %}
+                  <h4><a href="/blogs/20250827_slim_socials_revisited.html">Reducing phone addiction - 4 months on...</a> (27th August 2025)</h4>
+                  <!-- <p><p>Back in April I posted about reducing my phone addiction and trying to find ways to reset my brain and waste less time on my phone. This post is written four months down the line, and goes through what worked, what didn’t and reflections.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+                    <h3>April</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20250422_slim_socials.html">Reducing phone addiction - How I used coding to help</a> (22nd April 2025)</h4>
+                  <!-- <p><h1 id="slowly-slowly">Slowly slowly…</h1>
+
+</p> Not needed for now -->
+                
+                  
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20250401_ultimateflaggle.html">The Creation and Launch of Ultimate Flaggle</a> (1st April 2025)</h4>
+                  <!-- <p><h2 id="getting-started">Getting Started</h2>
+
+</p> Not needed for now -->
+                
+              
+                <h2 id="y2024">2024</h2>
+           
+                
+                
+                  
+                  
+                    <h3>June</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20240606_masters.html">Dissertation Project</a> (6th June 2024)</h4>
+                  <!-- <p><p><strong>TLDR;</strong> My dissertation can be read <a href="https://github.com/cheylea/selfverification-evoting/blob/main/dissertation_files/Hopkinson_Cheylea_Dissertation_redacted.pdf">here</a> and the code is viewed <a href="https://github.com/cheylea/selfverification-evoting">here</a>.<br />
+You can also test my e-voting tool <a href="https://selfverificationelectronicvotingtool-che159250.pythonanywhere.com/">here,</a> and if you’re a complete nerd the poster I did on e-voting as well <a href="https://github.com/cheylea/selfverification-evoting/blob/main/dissertation_files/Exploring%20Solutions%20to%20Internet%20Voting-%20Poster.pdf">here</a>…</p>
+
+</p> Not needed for now -->
+                
+              
+                <h2 id="y2021">2021</h2>
+           
+                
+                
+                  
+                  
+                    <h3>November</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20211104_masters.html">Masters Blog Week Eight to Ten - Final thoughts on AI and finishing my first module</a> (4th November 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+                    <h3>October</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20211023_masters.html">Masters Blog Week Eight to Ten - Final thoughts on AI and finishing my first module</a> (23rd October 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20211003_masters.html">Masters Blog Week Seven - Group Projects</a> (3rd October 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+                    <h3>September</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20210925_masters.html">Masters Blog Week Five / Six - AI in Healthcare and Imposter Syndrome</a> (25th September 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20210911_masters.html">Masters Blog Week Four - Seminars, Deadlines and Electronic Elections</a> (11th September 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20210903_masters.html">Masters Blog Week Three - Smart homes of the future</a> (3rd September 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+                    <h3>August</h3>
+                    
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20210819_masters.html">Masters Blog Week Two - How to write and sound like you know stuff</a> (19th August 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+                  
+                  
+           
+                  
+                  
+
+                  <h4><a href="/blogs/20210817_masters.html">Masters Blog Week One - Welcome back to Academia</a> (17th August 2021)</h4>
+                  <!-- <p><p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+
+</p> Not needed for now -->
+                
+              
             </section>
 
          
@@ -268,3 +439,44 @@ title: "Cheylea Hopkinson"
             });
         </script>
    </body>
+
+      <div class="main">
+      <h2>Leave a comment</h2>
+      </div>
+      <section id="utterances-comments"></section>
+   </div>
+
+      <!-- Footer
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class="footer">
+         <!-- Add footer text with link -->
+         <p>All rights reserved © Cheylea Hopkinson 2025. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/" target="_blank">LinkedIn</a>.</p>
+      </div>
+      <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+      <!-- Comments
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+         <script>
+            'use strict';
+          
+            (function() {
+              var commentContainer = document.querySelector('#utterances-comments');
+          
+              if (!commentContainer) {
+                return;
+              }
+          
+              var script = document.createElement('script');
+              script.setAttribute('src', 'https://utteranc.es/client.js');
+              script.setAttribute('repo', 'cheylea/cheylea.github.io');
+              script.setAttribute('issue-term', 'url');
+              script.setAttribute('label', 'blog-comment');
+              script.setAttribute('theme', 'dark-blue');
+              script.setAttribute('crossorigin', 'anonymous');
+          
+              commentContainer.appendChild(script);
+            })();
+         </script>
+   </body>
+</html>
