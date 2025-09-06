@@ -1,415 +1,125 @@
-/* Stylesheet for Personal website
-––––––––––––––––––––––––––––––––––––––––––––––––––-------------------- */
+/* ==========================================================================
+   Personal Website Stylesheet
+   ========================================================================== */
 
-/* Contents
-––––––––––––––––––––––––––––––––––––––––––––––––––--------------------
-1. Reset default margins, padding, and borders
-2. Styling for the overall body of the website
-3. Styling for the header portion of the homepage
-4. Styling for icons for the top of the website page
-5. Styling for the navigation bar
-6. Styling for main content of the website
-7. Download CV Button
-8. Styling for the experience portion of the website
-9. Projects button/images
-10. Styling for the footer of the website
-11. Aurora Title Effect
-*/
+/* --------------------------------------------------------------------------
+   1. Font Imports
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
 
 
-/* 1. Reset default margins, padding, and borders */
-* {
+/* --------------------------------------------------------------------------
+   2. Global Reset & Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-/* 2. Styling for the overall body of the website */
 html {
-  scroll-padding-top: 80px; /* height of your navbar */
+  scroll-padding-top: 80px; /* height of navbar */
+  height: 100%;
+  width: 100%;
 }
 
 body {
-  background-color: #0F1020;
-  font-family: "Consolas", monospace, Arial, sans-serif;
-  padding-bottom: 1%; /* Ensure footer doesn't cut off content */
+  background-color: var(--clr-1);
+  font-family: MS Sans Serif, Tahoma, sans-serif;
 }
 
-body::after {
-  content: "";
-  background-image: url('../images/forgetmenot.jpg'); /* source: https://wall.alphacoders.com/big.php?i=1273780 */
-  background-size: cover;
-  background-position: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.05;
-  z-index: -1;
-}
-
-/* 3. Styling for the header portion of the homepage */
-.home {
-  padding-left: 8%;
-  padding-right: 8%;
-  color: #D3CDD7;
+img {
+  max-width: 70%;
+  height: auto;
   text-align: center;
-  margin-top: 25vh;
-}
-.home h1 { 
-  font-size: 6vw;
-}
-.home p {
-  font-size: 2vw;
-  padding: 1%;
-  padding-bottom: 2%;
 }
 
-/* 4. Styling for icons for the top of the website page */
-.icons {
-  color: #C1E0F7;
-  list-style-type: none;
-  border: none;
-  padding-left: 0;
-  padding-top: 0.5vh;
-  display: block;
-  display: inline-flex;
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 1.5vh;
-}
-.icons p {
-  padding: 2%;
-  font-size: 1.25vw;
-}
-.icons img {
-  width: 5vw;
-  height: 5vw;
-  border-radius: 5%;
-}
-
-/* 5. Styling for the navigation bar */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #EFBCD5, #D37DAF, #C1E0F7); /* gradient background */
-  padding: 1vh 0;  /* vertical padding for height */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* subtle shadow */
-  z-index: 1000;
-  font-size: 1vw;
-}
-
-.nav ul {
-  display: flex;
-  justify-content: center;  /* center horizontally */
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav ul li {
-  margin: 0 2.5vw;  /* spacing between links */
-}
-
-.nav a {
-  color: #ffffff;
+a {
+  color: var(--clr-5);
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5vh 1vw; /* padding inside links for clickable area */
-  border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
-.nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* highlight background on hover */
-  color: #D37DAF;
-  transform: scale(1.05); /* subtle zoom effect */
+a:hover {
+  color: var(--clr-6);
 }
 
-/* 6. Styling for main content of the website */
-.main { 
-  color: #D3CDD7;
-  text-align: justify;
-  padding-left: 12%;
-  padding-right: 12%;
-  font-size: 1.25vw;
-  vertical-align: middle;
-}
-.main a { 
-  color: #C1E0F7;
-}
-.main a:hover { 
-  color: #208AAE;
-}
-.main ul {
-  list-style-position: outside;
-  margin-left: 1%;
-  list-style-type: none;
-  text-align: center;
-}
-.main li {
-  padding: 0.5%;
-  margin-left: 1%;
-  text-align: center;
-}
-.main h1 {
-  font-size: 4vw;
-  color: #C1E0F7;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  text-align: center;
-}
-.main h2 { 
-  font-size: 2vw;
-  padding-top: 2%;
-  padding-bottom: 0.5%;
-  color: #C1E0F7;
-}
-.main p {
-  color: #D3CDD7;
-  overflow: visible;
-}
-.main img {
-  width: 20vw;
-  height: 20vw;
-  float: left;
-  margin-right: 2vw;
-  margin-top: 1vh;
-  border-radius: 5%;
-}
 
-/* 7. Download CV Button */
-.home .button {
-  background-color: #EFBCD5; 
-  border: none;
-  color: #0F1020;
-  padding: 1.5vh 3vw;
-  display: inline-block;
-  font-size: 1vw;
-  border-radius: 5%;
-  font-family: "Consolas", Arial, sans-serif;
-  align-items: center;
-}
-.home .button:hover {
-  background-color: #C1E0F7;
-}
-
-/* 8. Styling for the experience portion of the website */
-.main .experience {
-  display: flex;
-  overflow: hidden;
-}
-.main .experience-list {
-  flex: 1;
-  padding: 1.5vh;
-  text-align: left;
-}
-.main .experience-list ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.main .experience-list li {
-  cursor: pointer;
-  padding: 1.5vh;
-  margin-bottom: 1.5vh;
-  border-radius: 3px;
-  background-color: #0F1020
-}
-.main .experience-list li:hover {
-  background-color: #C1E0F7;
-  color: #0F1020;
-}
-.main .experience-list li.active {
-  background-color: #EFBCD5;
-  color: #0F1020;
-}
-.main .experience-body {
-  flex: 3;
-  padding-left: 2vw;
-}
-
-/* 9. Projects button/images */
-.projects { 
-  color: #D3CDD7;
-  text-align: justify;
-  padding-left: 12%;
-  padding-right: 12%;
-  font-size: 1.25vw;
-  vertical-align: middle;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.projects .container {
-  position: relative;
-  height: 30%;
-  margin: 1vh;
-}
-.projects .image {
-  display: block;
-  border-radius: 5%;
-}
-.projects .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.8;
-  transition: .5s ease;
-  background-color: #0F1020;
-  border-radius: 5%;
-}
-.projects .container:hover .overlay {
-  background-color: #D3CDD7;
-}
-.projects .text {
-  color: #D3CDD7;
-  font-size: 1vw;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.projects .container:hover .text{
-  color: #0F1020;
-}
-
-/* 10. Styling for the footer of the website */
-.footer {
-  width: 100%;
-  text-align: right;
-  background-color: #EFBCD5;
-  font-family: "Consolas";
-  position: fixed;
-  bottom: 0;
-}
-.footer p {
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
-  padding-right: 1vw;
-  color: #0F1020;
-  font-size: 1vw;
-}
-.footer a {
-  color: #0F1020;
-}
-.footer a:hover {
-  color: #D37DAF;
-}
-
-/* 6. Styling for blog content of the website */
-.blog { 
-  color: #D3CDD7;
-  text-align: justify;
-  padding-left: 12%;
-  padding-right: 12%;
-  font-size: 1.25vw;
-  vertical-align: middle;
-}
-.blog a { 
-  color: #C1E0F7;
-}
-.blog a:hover { 
-  color: #208AAE;
-}
-.blog ul {
-  list-style-position: outside;
-  margin-left: 1%;
-  list-style-type: none;
-  text-align: center;
-}
-.blog li {
-  padding: 1%;
-  margin-left: 1%;
-  text-align: left;
-}
-.blog h1 {
-  font-size: 3vw;
-  color: #C1E0F7;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  text-align: left;
-}
-.blog h2 { 
-  font-size: 2.5vw;
-  padding-top: 2%;
-  padding-bottom: 0.5%;
-  color: #EFBCD5;
-}
-.blog h3 { 
-  font-size: 1.5vw;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  color: #EFBCD5;
-}
-.blog h4 { 
-  padding-top: 1%;
-  padding-bottom: 1%;
-  font-size: 2vw;
-  color: #EFBCD5;
-}
-.blog p {
-  color: #D3CDD7;
-  overflow: visible;
-}
-
-.blog img {
-  width: 20vw;
-  height: 20vw;
-  margin-right: 2vw;
-  margin-top: 1vh;
-  border-radius: 5%;
-}
-
-.blog p img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* 11. Aurora Title Effect */
-/* Credit: https://codepen.io/ostylowany */
-
+/* --------------------------------------------------------------------------
+   3. Variables
+   -------------------------------------------------------------------------- */
 :root {
-  --clr-1: #EFBCD5;
-  --clr-2: #C1E0F7;
-  --clr-3: #D37DAF;
-  --clr-4: #D37DAF;
+  /* Colour Palette */
+  --clr-1: #F9EEF5;
+  --clr-2: #F3D9E5;
+  --clr-3: #EEDBE7;
+  --clr-4: #D8ECF5;
+  --clr-5: #7B3357;
+  --clr-6: #E2A9C2;
 
+  /* Text Effects */
   --blur: 1rem;
-  --fs: clamp(3rem, 8vw, 7rem);s
+  --fs: clamp(2rem, 8vw, 6rem);
   --ls: clamp(-1.75px, -0.25vw, -3.5px);
+
+  /* Square Grid */
+  --grid: 24px;
+  --line: var(--clr-2);
+  --bg: #fff;
 }
 
-*,
-*::before,
-*::after {
-  font-family: inherit;
-  box-sizing: border-box;
+/* --------------------------------------------------------------------------
+   4. Layout & Structure
+   -------------------------------------------------------------------------- */
+.background {
+  flex: 1;
+  margin-top: var(--title-height);
+  min-height: calc(100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem));
+  background:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: var(--grid) var(--grid);
+  background-color: var(--bg);
+  image-rendering: -webkit-optimize-contrast; /* crisp lines */
+}
+
+.viewer {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1%; /* avoid footer cutoff */
 }
 
 .content {
-  text-align: center;
+  margin-left: var(--sidebar-width);
+  padding-bottom: 1%;
 }
 
+/* --------------------------------------------------------------------------
+   5. Title & Aurora Effect
+   Credit: https://codepen.io/ostylowany 
+   -------------------------------------------------------------------------- */
+
 .title {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
   font-size: var(--fs);
   font-weight: 800;
   letter-spacing: var(--ls);
-  position: relative;
   overflow: hidden;
   background: var(--bg);
   margin: 0;
+  text-align: center;
+  color: var(--clr-6);
+  text-shadow: 1px 1px 2px var(--clr-5);
+  padding: 0.5rem 1rem;
+  font-family: "M PLUS 2", sans-serif;
 }
 
 .aurora {
@@ -572,4 +282,367 @@ body::after {
   100% {
     border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   }
+}
+
+/* --------------------------------------------------------------------------
+   6. Sidebar Navigation
+   -------------------------------------------------------------------------- */
+.sidebar {
+  position: fixed;
+  top: var(--title-height);
+  width: 220px;
+  min-height: calc(100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem));
+  max-height: calc(100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem));
+  background-color: var(--clr-6);
+  color: var(--clr-5);
+  padding: 2rem 1rem;
+  border-color: #FFF #808080 #808080 #FFF;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  color: var(--clr-5);
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  background-color: var(--clr-4);
+}
+
+/* Toggle Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--fs);
+  color: var(--clr-5);
+  cursor: pointer;
+  margin: 0 auto 1rem auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  background-color: var(--clr-4);
+}
+
+.footer p {
+  padding: 0.5vh 1vw;
+  color: var(--clr-5);
+  font-size: clamp(11px, 1.5vw, 16px);
+}
+
+.footer a {
+  color: var(--clr-5);
+}
+
+.footer a:hover {
+  color: var(--clr-6);
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Blog & Inbox
+   -------------------------------------------------------------------------- */
+.blog { text-align: left; }
+
+.blog-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 2px solid #999;
+  box-shadow: 3px 3px 0 #666;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(11px, 1.5vw, 14px);
+  text-align: left;
+}
+
+.inbox-title {
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ccc;
+}
+
+.inbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inbox-item {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border-bottom: 1px dashed #aaa;
+  transition: background 0.2s;
+}
+
+.inbox-item:hover {
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+.inbox-date { font-size: 12px; color: #555; margin-bottom: 2px; }
+.inbox-subject { font-weight: bold; font-size: 14px; color: #000; }
+.inbox-subject:hover { text-decoration: underline; }
+.inbox-snippet { font-size: 12px; color: #444; margin-top: 3px; }
+
+/* --------------------------------------------------------------------------
+   9. Window Component
+   -------------------------------------------------------------------------- */
+.window {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem));
+  background: #C0C0C0;
+  border: 1px solid;
+  border-color: #FFF #808080 #808080 #FFF;
+  padding: 1px;
+}
+
+.title-bar {
+  position: fixed;
+  z-index: 101;
+  width: calc(50% - 224px);
+  padding: 5px;
+  background: var(--clr-6);
+  color: var(--clr-5);
+  top: var(--title-height);
+  font-weight: bold;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+}
+
+.title-bar p {
+  margin: 2px 0 0 1px;
+  font-size: clamp(16px, 1.5vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-bar img { width: 24px; height: 24px; }
+
+.title-bar-buttons {
+  display: flex;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.title-bar button {
+  width: 24px; height: 24px;
+  margin: 2px 2px 2px 0;
+  background: #C0C0C0;
+  border: 1px solid;
+  border-color: #FFF #808080 #808080 #FFF;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--clr-5);
+  font-family: MS Sans Serif, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.title-bar button:active {
+  box-shadow: inset 2px 2px #808080, inset -2px -2px #fff;
+  transform: translate(1px, 1px); /* optional tiny movement for effect */
+}
+
+.window-content {
+  font-family:MS Sans Serif, Tahoma, sans-serif;
+  flex: 1;
+  overflow: auto;
+  padding-top: calc(var(--title-bar-height) * 2);
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  top: var(--title-bar-height);
+  background: var(--clr-2);
+  box-shadow: inset -2px -2px #808080, inset 2px 2px #fff;
+}
+
+
+/* --------------------------------------------------------------------------
+   10. Blog Posts
+   -------------------------------------------------------------------------- */
+.post-main { text-align: left; }
+.post-date { font-style: italic; text-align: left; }
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+}
+.post-content img { max-width: 70%; height: auto; }
+.post-content a { color: var(--clr-5); }
+.post-content a:hover { color: var(--clr-6); }
+
+
+/* --------------------------------------------------------------------------
+   11. Projects
+   -------------------------------------------------------------------------- */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: justify;
+}
+
+.projects .container {
+  position: relative;
+  margin: 1vh;
+  height: 20vh;
+  width: 20vh;
+}
+
+.projects .image { display: block; border-radius: 5%; height: 100%; width:100%; max-width: 100%;}
+
+.projects .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-5);
+  opacity: 0.6;
+  transition: .5s ease;
+  border-radius: 5%;
+}
+
+.projects .container:hover .overlay { background-color: var(--clr-5); opacity: 0.9;}
+
+.projects .text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--clr-5);
+  font-size: clamp(11px, 1.5vw, 16px);
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+.projects .container:hover .text { color: var(--clr-6); display: block; opacity: 1;}
+
+
+/* --------------------------------------------------------------------------
+   12. Experience
+   -------------------------------------------------------------------------- */
+.experience {
+  display: flex;
+  overflow: hidden;
+}
+
+.experience-list {
+  flex: 1;
+  padding: 1.5vh;
+  text-align: left;
+}
+
+.experience-list ul { list-style: none; }
+
+.experience-list li {
+  padding: 1.5vh;
+  margin-bottom: 1.5vh;
+  background-color: #0F1020;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.experience-list li:hover {
+  background-color: #C1E0F7;
+  color: #0F1020;
+}
+
+.experience-list li.active {
+  background-color: #EFBCD5;
+  color: #0F1020;
+}
+
+.experience-body {
+  flex: 3;
+  padding-left: 2vw;
+}
+
+/* --------------------------------------------------------------------------
+   14. Social Media Buttons
+   -------------------------------------------------------------------------- */
+
+.socials {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.social-buttons{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-buttons:hover {
+  transform: translateY(-3px);
+  color: var(--clr-5);
+}
+
+/* --------------------------------------------------------------------------
+   15. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (orientation: portrait) {
+  .viewer { width: 100%; max-width: none; margin: 0 0 10px; }
+  .content { margin-left: 0; margin-bottom: 10px; }
+  .footer { margin-top: 12px; }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+    padding: 0;
+    top: 0;
+  }
+  .menu-toggle { display: block; }
+  .sidebar nav ul,
+  .sidebar h2 { display: none; margin-top: 1rem; }
+  .sidebar.nav-open nav ul,
+  .sidebar.nav-open nav h2 { display: flex; flex-direction: column; }
+  .sidebar .blog li a { text-align: center; }
+  .blog-section { display: none; }
+  .title-bar {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+  .window-content { padding: 20px; }
 }
