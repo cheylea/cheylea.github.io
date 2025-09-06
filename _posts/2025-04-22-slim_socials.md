@@ -4,6 +4,8 @@ title: "Reducing phone addiction - How I used coding to help"
 date: 2025-04-22 07:53:00 +0100
 ---
 
+Have you ever felt like your phone is rotting your brain but you can't stop?
+
 Slowly slowly...
 ================
 
