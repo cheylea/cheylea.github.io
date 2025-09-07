@@ -3,7 +3,7 @@ layout: base
 title: "Blog"
 ---
 
-<div class="blog-section">
+<div class="blog-section" style="display: block;">
   {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
   <p class="inbox-title">📥 My Blog Posts</p>
   {% for y in years %}
