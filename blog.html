@@ -3,30 +3,25 @@ layout: base
 title: "Blog"
 ---
 
-<h1>Blog</h1>
-                        
-              {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
-              <ul style="text-align: left;">
-                {% for y in years %}
-                  <li><a href="#y{{ y.name }}">{{ y.name }}</a></li>
-                {% endfor %}
-              </ul>
-           
-              {% for y in years %}
-                <h2 id="y{{ y.name }}">{{ y.name }}</h2>
-           
-                {% assign current_month = "" %}
-                {% for post in y.items %}
-                  {% assign month_name = post.date | date: "%B" %}
-                  {% if month_name != current_month %}
-                    <h3>{{ month_name }}</h3>
-                    {% assign current_month = month_name %}
-                  {% endif %}
-           
-                  {% assign d = post.date | date: "%-d" | plus: 0 %}
-                  {% capture suffix %}{% if d == 11 or d == 12 or d == 13 %}th{% else %}{% assign m = d | modulo:10 %}{% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}{% endif %}{% endcapture %}
-
-                  <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%-d" }}{{ suffix }} {{ post.date | date: "%B %Y" }})</h4>
-                  <!-- {% if post.excerpt %}<p>{{ post.excerpt }}</p>{% endif %} Not needed for now -->
-                {% endfor %}
-              {% endfor %}
+<div class="blog-section">
+  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+  <p class="inbox-title">📥 My Blog Posts</p>
+  {% for y in years %}
+    
+    <p class="inbox-title">{{ y.name }}</p>
+    <div class="inbox-list">
+      {% for post in y.items %}
+        <div class="inbox-item">
+          <span class="inbox-date">{{ post.date | date: "%-d %b %Y" }}</span>
+          <a href="{{ post.url | relative_url }}" class="inbox-subject">
+            {{ post.title }}
+          </a>
+          {% if post.excerpt %}
+            <p class="inbox-snippet">{{ post.excerpt | strip_html | truncate: 200, "..." }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+      <p class="inbox-title"></p>
+    </div>
+  {% endfor %}
+</div>

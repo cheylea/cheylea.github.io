@@ -104,9 +104,9 @@
                   <img src="../static/images/cheylea_favicon.png" alt="Favicon" width="24" height="24">
                   <p>Home Page</p>
                   <div class="title-bar-buttons">
-                    <button title="Back to home" onclick="document.location='index.html'">–</button>
-                    <button style="font-size: 16px;">☐</button>
-                    <button title="Back to home" onclick="document.location='index.html'">×</button>
+                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'">–</button>
+                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'" style="font-size: 16px;">☐</button>
+                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'">×</button>
                     </div>
                 </div>
                 <div class="window-content">
@@ -123,8 +123,9 @@
       <!-- Footer
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="footer">
+        <div class="start-button"></div>
          <!-- Add footer text with link -->
-         <p>All rights reserved © Cheylea Hopkinson 2025. Contact on <a href="https://www.linkedin.com/in/cheyleahopkinson/" target="_blank">LinkedIn</a>.</p>
+         <p>All rights reserved © Cheylea Hopkinson 2025.</p>
       </div>
       <!-- End Document
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -151,6 +152,25 @@
 
     toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('nav-open');
-});
+    });
+
+    const companyListItems = document.querySelectorAll('.experience-list li');
+            const experienceDivs = document.querySelectorAll('.experience-body > div');
+        
+            companyListItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const target = this.dataset.target;
+                    experienceDivs.forEach(div => {
+                        if (div.id === target) {
+                            div.style.display = 'block';
+                        } else {
+                            div.style.display = 'none';
+                        }
+                    });
+                    companyListItems.forEach(li => li.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+    
    </script>
 </html>
