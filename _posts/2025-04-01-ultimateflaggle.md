@@ -4,10 +4,12 @@ title: "The Creation and Launch of Ultimate Flaggle"
 date: 2025-04-01 20:25:00 +0100
 ---
 
+It has been quite some time since I graduated, and I've been 'off and on' working on something that I have been pursuing for pure fun. 
+
 Getting Started
 ---------------
 
-It has been quite some time since I graduated, and I've been off and on working on something that I have been pursuing for pure fun. It all started when my partner James and I got into the Wordle and other NYT daily games. We were a bit late to the party, but making our streaks by midnight quickly became a daily routine. We enjoy them a lot.  
+It all started when my partner James and I got into the Wordle and other NYT daily games. We were a bit late to the party, but making our streaks by midnight quickly became a daily routine. We enjoy them a lot.  
 But James, being an avid geography buff wanted more. He wanted to see if there were any fun versions of daily puzzles for flags. After some research (ie…googling “flagle”) we came across a couple of flag related wordle inspired games: https://www.flaggle.net/ and https://flagle.gg/ .  
 Flaggle is a version of a daily guessing country flag game, where when you guess the flag it will highlight green where the colours of the flag match:
 

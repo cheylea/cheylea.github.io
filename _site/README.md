@@ -1,4 +1,9 @@
 # cheylea.github.io
+To run website locally install Jekyll and run
+
+``` bash
+bundle exec jekyll serve
+```
 
 # Authors
 Website: [Cheylea](https://github.com/cheylea)\
@@ -22,7 +27,7 @@ C:.
 ```
 
 # Author Notes
-This is the repositiory for my personal GitHub pages website. I started this project a long time ago when becoming a Computer Science student, as it seemed like a standard for anyone in technology to have their own website. The trouble is, I am a back end coder and do not take well to front end code. However, determined, I plowed ahead.
+This is the repository for my personal GitHub pages website. I started this project a long time ago when becoming a Computer Science student, as it seemed like a standard for anyone in technology to have their own website. The trouble is, I am a back end coder and do not take well to front end code. However, determined, I plowed ahead.
 
 At first I was very against wanting to learn JavaScript, and spend a lot of time coming up with ways to do what I wanted to do with pure CSS. However eventually I caved in order to get the site looking exactly how I liked, and after using javascript out of necessity for my dissertation project. Another feature of this site is not a sacrifice of things I actually like for the sake of boring typical backgrounds and colours associated with computer science. There is such diversity in this field and breaking stereotypes is the goal!
 

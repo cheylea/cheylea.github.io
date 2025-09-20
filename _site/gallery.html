@@ -50,17 +50,37 @@
                <div class="blog-section">
                  <p class="inbox-title">📥 Latest from the blog...</p>
                  <div class="inbox-list">
-                   {% for post in site.posts limit:3 %}
+                   
                    <div class="inbox-item">
-                     <span class="inbox-date">{{ post.date | date: "%-d %b %Y" }}</span>
-                     <a href="{{ post.url | relative_url }}" class="inbox-subject">
-                       {{ post.title }}
+                     <span class="inbox-date">19 Sep 2025</span>
+                     <a href="/blogs/20250919_new_website.html" class="inbox-subject">
+                       New Website Design
                      </a>
-                     {% if post.excerpt %}
-                     <p class="inbox-snippet">{{ post.excerpt | strip_html | truncate: 35, "..." }}</p>
-                     {% endif %}
+                     
+                     <p class="inbox-snippet">A very brief blog post to say we...</p>
+                     
                    </div>
-                   {% endfor %}
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">27 Aug 2025</span>
+                     <a href="/blogs/20250827_slim_socials_revisited.html" class="inbox-subject">
+                       Reducing phone addiction - Revisiting four months later
+                     </a>
+                     
+                     <p class="inbox-snippet">Back in April I posted about red...</p>
+                     
+                   </div>
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">22 Apr 2025</span>
+                     <a href="/blogs/20250422_slim_socials.html" class="inbox-subject">
+                       Reducing phone addiction - How I used coding to help
+                     </a>
+                     
+                     <p class="inbox-snippet">Have you ever felt like your pho...</p>
+                     
+                   </div>
+                   
                  </div>
                </div>
                <div class="socials">
@@ -83,7 +103,7 @@
             <div class="window">
                 <div class="title-bar">
                   <img src="../static/images/cheylea_favicon.png" alt="Favicon" width="24" height="24">
-                  <p>{{ page.title }}</p>
+                  <p>Gallery</p>
                   <div class="title-bar-buttons">
                     <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'">–</button>
                     <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'" style="font-size: 16px;">☐</button>
@@ -91,7 +111,7 @@
                     </div>
                 </div>
                 <div class="window-content">
-                  {{ content }}
+                  
                 </div>
               </div>
             </div>

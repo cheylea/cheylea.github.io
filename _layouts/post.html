@@ -1,27 +1,53 @@
 ---
 layout: base
 ---
+<div class="title-bar-buttons">
+    <button class="title-bar-button" title="Back to blog list" onclick="document.location='../blog.html'" style="font-size: 14px;">🡸</button>
+</div>
 
-<main class="content">
-  <article class="blog">
-    <h1 style="padding-top: 10%;">{{ page.title }}</h1>
+<main class="post-main">
+  <article class="post">
     <br>
     <p class="post-date">
       {% assign d = post.date | date: "%-d" | plus: 0 %}
-      {% capture suffix %}{% if d == 11 or d == 12 or d == 13 %}th{% else %}{% assign m = d | modulo:10 %}{% case m %}{% when 1 %}st{% when 2 %}nd{% when 3 %}rd{% else %}th{% endcase %}{% endif %}{% endcapture %}
-
-      {{ page.date | date: "%-d" }}{{ suffix }} {{ page.date | date: "%B %Y" }}
+      {{ page.date | date: "%-d" }} {{ page.date | date: "%B %Y" }}
       
     </p>
     <br>
-    <div class="blog">
+    <div class="post-content">
       {{ content }}
+      <br>
     </div>
+    
     <br>
-    <br>
-    <p>
-      <a href="/">Back to home</a></p>
+      
 
-    <p>Leave a comment</p>
+    <div class="main">
+      <h2>Leave a comment</h2>
+      </div>
+      <section id="utterances-comments"></section>
   </article>
+  <!-- Comments
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+         <script>
+            'use strict';
+          
+            (function() {
+              var commentContainer = document.querySelector('#utterances-comments');
+          
+              if (!commentContainer) {
+                return;
+              }
+          
+              var script = document.createElement('script');
+              script.setAttribute('src', 'https://utteranc.es/client.js');
+              script.setAttribute('repo', 'cheylea/cheylea.github.io');
+              script.setAttribute('issue-term', 'url');
+              script.setAttribute('label', 'blog-comment');
+              script.setAttribute('theme', 'dark-blue');
+              script.setAttribute('crossorigin', 'anonymous');
+          
+              commentContainer.appendChild(script);
+            })();
+         </script>
 </main>

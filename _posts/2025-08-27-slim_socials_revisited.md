@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reducing phone addiction - 4 months on..."
+title: "Reducing phone addiction - Revisiting four months later"
 date: 2025-08-27 20:19:00 +0100
 ---
 
