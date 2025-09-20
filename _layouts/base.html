@@ -14,7 +14,7 @@
 
       <!-- Favicon
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <link rel="icon" type="image/png" href="../static/images/cheylea_favicon.png"> <!-- Favicon by IllusiveBIair https://github.com/IllusiveBIair -->
+      <link rel="icon" type="image/png" href="../static/images/favicon-large.png"> <!-- Favicon by IllusiveBIair https://github.com/IllusiveBIair -->
 
       <!-- Social Icons
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -53,7 +53,7 @@
                    {% for post in site.posts limit:3 %}
                    <div class="inbox-item">
                      <span class="inbox-date">{{ post.date | date: "%-d %b %Y" }}</span>
-                     <a href="{{ post.url | relative_url }}" class="inbox-subject">
+                     <a href="{{ post.url | relative_url }}" class="inbox-subject" style="cursor: pointer;">
                        {{ post.title }}
                      </a>
                      {% if post.excerpt %}
