@@ -567,7 +567,17 @@ a:hover {
   border-radius: 5%;
 }
 
+.projects .overlay-light {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-5);
+  opacity: 0.1;
+  transition: .5s ease;
+  border-radius: 5%;
+}
+
 .projects .container:hover .overlay { background-color: var(--clr-5); opacity: 0.9;}
+.projects .container:hover .overlay-light { background-color: var(--clr-5); opacity: 0.9;}
 
 .projects .text {
   position: absolute;
@@ -680,39 +690,9 @@ a:hover {
   color: var(--clr-5);
 }
 
-/* --------------------------------------------------------------------------
-   15. Responsive Adjustments
-   -------------------------------------------------------------------------- */
-@media (orientation: portrait) {
-  .viewer { width: 100%; max-width: none; margin: 0 0 10px; }
-  .content { margin-left: 0; margin-bottom: 10px; }
-  .footer { margin-top: 12px; }
-  .sidebar {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    max-height: none;
-    padding: 0;
-    top: 0;
-  }
-  .menu-toggle { display: block; }
-  .sidebar nav ul,
-  .sidebar h2 { display: none; margin-top: 1rem; }
-  .sidebar.nav-open nav ul,
-  .sidebar.nav-open nav h2 { display: flex; flex-direction: column; }
-  .sidebar .blog li a { text-align: center; }
-  .blog-section { display: none; }
-  .socials { display: none; }
-  .title-bar {
-    position: relative;
-    width: 100%;
-    top: 0;
-  }
-  .window-content { padding: 20px; }
-}
 
 /* --------------------------------------------------------------------------
-   16. About Me
+   15. About Me
    -------------------------------------------------------------------------- */
    
     .aboutme-card {
@@ -742,7 +722,7 @@ a:hover {
       border-radius: 8px;
       background-size: cover;
       background-position: center;
-      image-rendering: pixelated; /* pixel-art style */
+      image-rendering: pixelated;
     }
 
     .aboutme-title {
@@ -758,15 +738,18 @@ a:hover {
       border-radius: 8px;
     }
 
+    .aboutme-section a:hover{
+      color: var(--clr-7);
+    }
+
     .aboutme-section h2 {
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin-top: 0;
       margin-bottom: 10px;
       color: var(--clr-8);
       text-transform: uppercase;
     }
 
-    /* Stats Grid */
     .aboutme-stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -779,15 +762,18 @@ a:hover {
       border-radius: 6px;
       padding: 10px;
       color: #fff;
+      font-size: 0.8rem;
+      font-style: italic;
     }
 
     .aboutme-stat strong {
       display: block;
       margin-bottom: 6px;
       color: var(--clr-4);
+      font-size: 1.2rem;
+      font-style: normal;
     }
 
-    /* Inventory & Badges */
     .aboutme-list {
       list-style: none;
       padding: 0;
@@ -799,12 +785,10 @@ a:hover {
       margin: 5px 0;
     }
 
-    /* Quests */
     .aboutme-quest {
       color: var(--clr-7);
     }
 
-    /* Row layout for bottom sections */
     .aboutme-bottom-sections {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -816,16 +800,23 @@ a:hover {
     }
 
 /* --------------------------------------------------------------------------
-   17. Speech Bubble
-   Credit: https://projects.verou.me/bubbly/
+   16. Home Page & Speech Bubble
+   Credit: https://projects.verou.me/bubbly/ (for speech bubble)
    -------------------------------------------------------------------------- */
+.home-container {
+  position: relative;
+  display: inline-block;
+}
+
 .speech-bubble {
-	position: relative;
+	position: absolute;
 	background: #fff;
 	border-radius: .4em;
   padding: 5%;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 40%;
+  margin-right: 10%;
+  top: 5%;
+  left: 5%;
 }
 
 .speech-bubble:after {
@@ -841,4 +832,55 @@ a:hover {
 	border-left: 0;
 	margin-left: -22px;
 	margin-bottom: -44px;
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (orientation: portrait) {
+  .viewer { width: 100%; max-width: none; margin: 0 0 10px; }
+  .content { margin-left: 0; margin-bottom: 10px; }
+  .footer { margin-top: 12px; }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    max-height: none;
+    padding: 0;
+    top: 0;
+  }
+  .menu-toggle { display: block; }
+  .sidebar nav ul,
+  .sidebar h2 { display: none; margin-top: 1rem; }
+  .sidebar.nav-open nav ul,
+  .sidebar.nav-open nav h2 { display: flex; flex-direction: column; }
+  .sidebar .blog li a { text-align: center; }
+  .blog-section { display: none; }
+  .socials { display: none; }
+  .title-bar {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+  .window-content { padding: 20px; }
+  .speech-bubble {
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .speech-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #fff;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-top: -20px;
+}
+
 }
