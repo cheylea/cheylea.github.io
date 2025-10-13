@@ -400,6 +400,14 @@ a:hover {
   text-align: left;
 }
 
+.navigation .blog-section{
+  max-height: calc((100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem)) * 0.40);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: var(--clr-6) var(--clr-4);
+  scrollbar-width: thin;
+}
+
 .inbox-title {
   margin-bottom: 8px;
   padding-bottom: 4px;
