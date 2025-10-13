@@ -545,6 +545,13 @@ a:hover {
   padding-top: 10px;
 }
 
+.post-content ul,
+.post-content ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+}
+
 
 /* --------------------------------------------------------------------------
    11. Projects
@@ -735,6 +742,7 @@ a:hover {
     .aboutme-title {
       font-size: 2rem;
       color: #fff;
+      text-align: center;
     }
 
     .aboutme-section {
@@ -821,8 +829,8 @@ a:hover {
 	border-radius: .4em;
   padding: 5%;
   margin-left: 40%;
-  margin-right: 10%;
-  top: 5%;
+  margin-right: 15%;
+  top: 0%;
   left: 5%;
 }
 
