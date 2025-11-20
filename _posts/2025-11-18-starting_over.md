@@ -15,3 +15,15 @@ This blog details the process of building my own journal app, and the lessons le
 
 Original
 ================
+My original concept was that I wanted it to look and feel like an actual notebook. I wanted each entry to have a page and then not just be the journal entry but have lots of different pieces of information about the day integrated on the page, such as steps and weather.
+
+I put together the following specification
+- Three gratitude questions that could be increased/decreased depending on what I wanted as time wore on
+- The ability to upload a picture to the entry (optional)
+- The entry to capture my total steps for the day, weather, most listening to song / genre and analyse the mood of my entry.
+- Have a home page with various graphs and analysis of my entries
+- Have the journal send a message to my slim-socials if I hadn't filled it in for the day
+- Look like a book and be able to flip through "pages" for each entry
+
+I first started this project back in April 2025, with the anticipation this would be a much shorter project than my Ultimate Flaggle project. It was around this time I began taking lots of steps to improve my health, such as the slim-socials project (see [Slim Socials](blogs/20250422_slim_socials.html)) and also my weight loss journey. However, this definitely became a massive time sink very quickly. 
+
