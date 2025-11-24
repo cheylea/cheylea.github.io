@@ -1,9 +1,7 @@
 ---
 layout: base
 ---
-<div class="title-bar-buttons">
-    <button class="title-bar-button" title="Back to blog list" onclick="document.location='../blog.html'" style="font-size: 14px;">🡸</button>
-</div>
+
 
 <main class="post-main">
   <article class="post">
@@ -13,6 +11,10 @@ layout: base
       {{ page.date | date: "%-d" }} {{ page.date | date: "%B %Y" }}
       
     </p>
+    <br>
+    <div class="title-bar-buttons">
+        <button class="title-bar-button" title="Back to blog list" onclick="document.location='../blog.html'" style="font-size: 14px;">🡸</button>
+    </div>
     <br>
     <div class="post-content">
       {{ content }}
