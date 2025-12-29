@@ -36,7 +36,7 @@
     <div class="background">
         <div class="viewer">
             <div class="sidebar">
-               <button class="menu-toggle">☰</button>
+              <div class="navigation">
                <nav>
                 <h2>✿Welcome!❀</h2>
                 <ul>
@@ -47,10 +47,19 @@
                   <li><a href="/blog">Blog</a></li>
                 </ul>
                </nav>
-               <div class="navigation">
                <div class="blog-section">
                  <p class="inbox-title">📥 Latest from the blog...</p>
                  <div class="inbox-list">
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">13 Oct 2025</span>
+                     <a href="/blogs/20251013_starting_over.html" class="inbox-subject" style="cursor: pointer;">
+                       Knowing when to start over (aka My Gratitude Journal)
+                     </a>
+                     
+                     <p class="inbox-snippet">In the last year or two I’ve bee...</p>
+                     
+                   </div>
                    
                    <div class="inbox-item">
                      <span class="inbox-date">13 Oct 2025</span>
@@ -72,16 +81,6 @@
                      
                    </div>
                    
-                   <div class="inbox-item">
-                     <span class="inbox-date">27 Aug 2025</span>
-                     <a href="/blogs/20250827_slim_socials_revisited.html" class="inbox-subject" style="cursor: pointer;">
-                       Reducing phone addiction - Revisiting four months later
-                     </a>
-                     
-                     <p class="inbox-snippet">Back in April I posted about red...</p>
-                     
-                   </div>
-                   
                  </div>
                </div>
                </div>
@@ -99,7 +98,6 @@
                      <i class="fas fa-flag"></i>
                    </a>
                  </div>
-
             </div>
             <div class="content">
             <div class="window">
@@ -260,15 +258,16 @@ There is also a test version of the ID tool available to try out <a href="https:
     const sidebarWidth = sidebar.offsetWidth;
     document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
 
+    const sidebarHeight = sidebar.offsetHeight;
+    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
     document.documentElement.style.setProperty('--title-bar-height', `${titleBarHeight}px`);
 
-    const toggleButton = document.querySelector('.menu-toggle');
+    const screenHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
 
-    toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('nav-open');
-    });
 
     const companyListItems = document.querySelectorAll('.experience-list li');
             const experienceDivs = document.querySelectorAll('.experience-body > div');

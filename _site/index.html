@@ -36,7 +36,7 @@
     <div class="background">
         <div class="viewer">
             <div class="sidebar">
-               <button class="menu-toggle">☰</button>
+              <div class="navigation">
                <nav>
                 <h2>✿Welcome!❀</h2>
                 <ul>
@@ -47,10 +47,19 @@
                   <li><a href="/blog">Blog</a></li>
                 </ul>
                </nav>
-               <div class="navigation">
                <div class="blog-section">
                  <p class="inbox-title">📥 Latest from the blog...</p>
                  <div class="inbox-list">
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">13 Oct 2025</span>
+                     <a href="/blogs/20251013_starting_over.html" class="inbox-subject" style="cursor: pointer;">
+                       Knowing when to start over (aka My Gratitude Journal)
+                     </a>
+                     
+                     <p class="inbox-snippet">In the last year or two I’ve bee...</p>
+                     
+                   </div>
                    
                    <div class="inbox-item">
                      <span class="inbox-date">13 Oct 2025</span>
@@ -72,16 +81,6 @@
                      
                    </div>
                    
-                   <div class="inbox-item">
-                     <span class="inbox-date">27 Aug 2025</span>
-                     <a href="/blogs/20250827_slim_socials_revisited.html" class="inbox-subject" style="cursor: pointer;">
-                       Reducing phone addiction - Revisiting four months later
-                     </a>
-                     
-                     <p class="inbox-snippet">Back in April I posted about red...</p>
-                     
-                   </div>
-                   
                  </div>
                </div>
                </div>
@@ -99,7 +98,6 @@
                      <i class="fas fa-flag"></i>
                    </a>
                  </div>
-
             </div>
             <div class="content">
             <div class="window">
@@ -114,20 +112,12 @@
                 </div>
                 <div class="window-content">
                   <div class="home-container">
-
-<div class="projects" >
-    <div class="container" style="width:100%; height:auto; margin-left: 15%; margin-right: 45%; margin-top:20%;">
-         <img src="static/images/cheylea-avatar.png" alt="Pixel art avatar of cheylea" class="image" style="border-radius: 12px;">
-         <div class="overlay-light" style="border-radius: 12px;">
-         <a href="/aboutme.html" title="About Me" class="text"><h1>Find out more about me!</h1></a>
-         </div>
-    </div>
+    <img src="static/images/cheylea-avatar.png" alt="Pixel art avatar of cheylea" class="image" style="border-radius: 12px;">
 </div>
 
 <div class="speech-bubble">
-    <h1>Hello!</h1>
-    <br>
     <p>Welcome to my site! I am a data professional with many hobbies including coding, performance, crafting and more!</p>
+    <p>Here you can find some info about me and my experience with university, work and personal projects.</p>
 </div>
 
 </div>
@@ -163,15 +153,16 @@
     const sidebarWidth = sidebar.offsetWidth;
     document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
 
+    const sidebarHeight = sidebar.offsetHeight;
+    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
     document.documentElement.style.setProperty('--title-bar-height', `${titleBarHeight}px`);
 
-    const toggleButton = document.querySelector('.menu-toggle');
+    const screenHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
 
-    toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('nav-open');
-    });
 
     const companyListItems = document.querySelectorAll('.experience-list li');
             const experienceDivs = document.querySelectorAll('.experience-body > div');

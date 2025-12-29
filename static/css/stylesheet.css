@@ -1,10 +1,29 @@
 /* ==========================================================================
    Personal Website Stylesheet
+
+    1. Font Imports
+    2. Global Reset & Base
+    3. Variables
+    4. Layout & Structure
+    5. Title & Aurora Effect
+    6. Sidebar Navigation
+    7. Footer
+    8. Blog & Inbox
+    9. Window Component
+    10. Blog Posts
+    11. Projects
+    12. Experience
+    13. Social Media Buttons
+    14. About Me
+    15. Home Page & Speech Bubble
+    16. Responsive Adjustments
+  
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. Font Imports
    -------------------------------------------------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
 
 
@@ -22,7 +41,7 @@
 }
 
 html {
-  scroll-padding-top: 80px; /* height of navbar */
+  scroll-padding-top: 80px;
   height: 100%;
   width: 100%;
 }
@@ -47,10 +66,10 @@ a:hover {
   color: var(--clr-6);
 }
 
-
 /* --------------------------------------------------------------------------
    3. Variables
    -------------------------------------------------------------------------- */
+
 :root {
   /* Colour Palette */
   --clr-1: #F9EEF5;
@@ -76,6 +95,7 @@ a:hover {
 /* --------------------------------------------------------------------------
    4. Layout & Structure
    -------------------------------------------------------------------------- */
+
 .background {
   flex: 1;
   margin-top: var(--title-height);
@@ -85,10 +105,11 @@ a:hover {
     linear-gradient(to bottom, var(--line) 1px, transparent 1px);
   background-size: var(--grid) var(--grid);
   background-color: var(--bg);
-  image-rendering: -webkit-optimize-contrast; /* crisp lines */
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .viewer {
+  min-width: 800px;
   max-width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -289,6 +310,7 @@ a:hover {
 /* --------------------------------------------------------------------------
    6. Sidebar Navigation
    -------------------------------------------------------------------------- */
+
 .sidebar {
   position: fixed;
   top: var(--title-height);
@@ -326,23 +348,11 @@ a:hover {
   background-color: var(--clr-4);
 }
 
-/* Toggle Button */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: var(--fs);
-  color: var(--clr-5);
-  cursor: pointer;
-  margin: 0 auto 1rem auto;
-}
-
-
 /* --------------------------------------------------------------------------
    7. Footer
-
    Credit: https://codepen.io/smpnjn/pen/ExLbvdJ
    -------------------------------------------------------------------------- */
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -382,11 +392,12 @@ a:hover {
     box-shadow: -2px -2px #e0dede, -2px 0 #e0dede, 0 -2px #e0dede, -4px -4px white, -4px 0 white, 0 -4px white, 2px 2px #818181, 0 2px #818181, 2px 0 #818181,  2px -2px #e0dede, -2px 2px #818181, -4px 2px white, -4px 4px black, 4px 4px black, 4px 0 black, 0 4px black, 2px -4px white, 4px -4px black;
 }
 
-
 /* --------------------------------------------------------------------------
    8. Blog & Inbox
    -------------------------------------------------------------------------- */
-.blog { text-align: left; }
+
+.blog { text-align: left; 
+}
 
 .blog-section {
   max-width: 600px;
@@ -400,8 +411,8 @@ a:hover {
   text-align: left;
 }
 
-.navigation .blog-section{
-  max-height: calc((100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem)) * 0.40);
+.navigation .blog-section {
+  max-height: calc((100vh - var(--title-height, 3.4rem) - var(--footer-height, 3rem)) * 0.60);
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-color: var(--clr-6) var(--clr-4);
@@ -444,6 +455,7 @@ a:hover {
 /* --------------------------------------------------------------------------
    9. Window Component
    -------------------------------------------------------------------------- */
+
 .window {
   display: flex;
   flex-direction: column;
@@ -459,7 +471,7 @@ a:hover {
 .title-bar {
   position: fixed;
   z-index: 99;
-  width: calc(50% - 224px + 1px);
+  width: calc(max(50%, 800px) - 224px + 1px);
   padding: 5px;
   background: var(--clr-6);
   color: var(--clr-5);
@@ -480,7 +492,11 @@ a:hover {
   justify-content: flex-start;
 }
 
-.title-bar img { width: 24px; height: 24px; margin-right: 5px;}
+.title-bar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
 
 .title-bar-buttons {
   display: flex;
@@ -521,21 +537,39 @@ a:hover {
   
 }
 
-
 /* --------------------------------------------------------------------------
    10. Blog Posts
    -------------------------------------------------------------------------- */
-.post-main { text-align: left; }
-.post-date { font-style: italic; text-align: left; font-size: clamp(12px, 1.5vw, 14px);}
+  
+.post-main { text-align: left; 
+}
+
+.post-date {
+  font-style: italic;
+  text-align: left;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
 .post-content {
   max-width: 800px;
   margin: 0 auto;
   font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.6;
 }
-.post-content img { max-width: 70%; height: auto; }
-.post-content a { color: var(--clr-5); }
-.post-content a:hover { color: var(--clr-6); }
+
+.post-content img {
+  max-width: 70%;
+  height: auto;
+}
+
+.post-content a {
+  color: var(--clr-5);
+}
+
+.post-content a:hover {
+  color: var(--clr-6);
+}
+
 .post-content h1 {
   font-size: clamp(18px, 1.5vw, 20px);
   padding-top: 10px;
@@ -552,10 +586,10 @@ a:hover {
   padding-left: 1.5em;
 }
 
-
 /* --------------------------------------------------------------------------
    11. Projects
    -------------------------------------------------------------------------- */
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -570,7 +604,13 @@ a:hover {
   width: 20vh;
 }
 
-.projects .image { display: block; border-radius: 5%; height: 100%; width:100%; max-width: 100%;}
+.projects .image {
+  display: block;
+  border-radius: 5%;
+  height: 100%;
+  width:100%;
+  max-width: 100%;
+}
 
 .projects .overlay {
   position: absolute;
@@ -590,8 +630,15 @@ a:hover {
   border-radius: 5%;
 }
 
-.projects .container:hover .overlay { background-color: var(--clr-5); opacity: 0.9;}
-.projects .container:hover .overlay-light { background-color: var(--clr-5); opacity: 0.9;}
+.projects .container:hover .overlay {
+  background-color: var(--clr-5);
+  opacity: 0.9;
+}
+
+.projects .container:hover .overlay-light {
+  background-color: var(--clr-5);
+  opacity: 0.9;
+}
 
 .projects .text {
   position: absolute;
@@ -604,12 +651,16 @@ a:hover {
   display: none;
 }
 
-.projects .container:hover .text { color: var(--clr-6); display: block; opacity: 1;}
-
+.projects .container:hover .text {
+  color: var(--clr-6);
+  display: block;
+  opacity: 1;
+}
 
 /* --------------------------------------------------------------------------
    12. Experience
    -------------------------------------------------------------------------- */
+
 .experience {
   display: flex;
   flex-direction: column; /* list on top, body below */
@@ -704,190 +755,152 @@ a:hover {
   color: var(--clr-5);
 }
 
-
 /* --------------------------------------------------------------------------
    15. About Me
    -------------------------------------------------------------------------- */
    
-    .aboutme-card {
-      max-width: 900px;
-      margin: auto;
-      background: var(--clr-5);
-      background-image: url('../images/stats-background.gif');
-      border: 4px solid var(--clr-6);
-      border-radius: 12px;
-      box-shadow: 0 0 20px var(--clr-6);
-      padding: 20px;
-      color: #fff;
-    }
+.aboutme-card {
+  max-width: 900px;
+  margin: auto;
+  background: var(--clr-5);
+  background-image: url('../images/stats-background.gif');
+  border: 4px solid var(--clr-6);
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--clr-6);
+  padding: 20px;
+  color: #fff;
+}
 
-    .aboutme-header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
+.aboutme-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
 
-    .aboutme-avatar {
-      min-width: 150px;
-      min-height: 150px;
-      background: #fff;
-      border: 4px solid var(--clr-6);
-      border-radius: 8px;
-      background-size: cover;
-      background-position: center;
-      image-rendering: pixelated;
-    }
+.aboutme-avatar {
+  min-width: 150px;
+  min-height: 150px;
+  background: #fff;
+  border: 4px solid var(--clr-6);
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+}
 
-    .aboutme-title {
-      font-size: 2rem;
-      color: #fff;
-      text-align: center;
-    }
+.aboutme-title {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
 
-    .aboutme-section {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: var(--clr-6);
-      border: 2px solid var(--clr-6);
-      border-radius: 8px;
-    }
+.aboutme-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--clr-6);
+  border: 2px solid var(--clr-6);
+  border-radius: 8px;
+}
 
-    .aboutme-section a:hover{
-      color: var(--clr-7);
-    }
+.aboutme-section a:hover{
+  color: var(--clr-7);
+}
 
-    .aboutme-section h2 {
-      font-size: 1.4rem;
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: var(--clr-8);
-      text-transform: uppercase;
-    }
+.aboutme-section h2 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--clr-8);
+  text-transform: uppercase;
+}
 
-    .aboutme-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
-    }
+.aboutme-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
 
-    .aboutme-stat {
-      background: var(--clr-8);
-      border: 2px solid var(--clr-6);
-      border-radius: 6px;
-      padding: 10px;
-      color: #fff;
-      font-size: 0.8rem;
-      font-style: italic;
-    }
+.aboutme-stat {
+  background: var(--clr-8);
+  border: 2px solid var(--clr-6);
+  border-radius: 6px;
+  padding: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-style: italic;
+}
 
-    .aboutme-stat strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--clr-4);
-      font-size: 1.2rem;
-      font-style: normal;
-    }
+.aboutme-stat strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--clr-4);
+  font-size: 1.2rem;
+  font-style: normal;
+}
 
-    .aboutme-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      color: var(--clr-8);
-    }
+.aboutme-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--clr-8);
+}
 
-    .aboutme-list li {
-      margin: 5px 0;
-    }
+.aboutme-list li {
+  margin: 5px 0;
+}
 
-    .aboutme-quest {
-      color: var(--clr-7);
-    }
+.aboutme-quest {
+  color: var(--clr-7);
+}
 
-    .aboutme-bottom-sections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
+.aboutme-bottom-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
 
-    .aboutme-bottom-sections .aboutme-section {
-      margin-bottom: 0; /* remove extra spacing inside row */
-    }
+.aboutme-bottom-sections .aboutme-section {
+  margin-bottom: 0; /* remove extra spacing inside row */
+}
 
 /* --------------------------------------------------------------------------
    16. Home Page & Speech Bubble
    Credit: https://projects.verou.me/bubbly/ (for speech bubble)
    -------------------------------------------------------------------------- */
+
 .home-container {
   position: relative;
   display: inline-block;
+  height:auto;
+}
+
+.home-container .image {
+  display: block;
+  border-radius: 5%;
+  height: auto;
+  width:40%;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 .speech-bubble {
-	position: absolute;
+	position: relative;
+  margin-left: 15%;
+  margin-right: 5%;
 	background: #fff;
 	border-radius: .4em;
   padding: 5%;
-  margin-left: 40%;
-  margin-right: 15%;
   top: 0%;
   left: 5%;
+  max-width: 70%;
 }
 
 .speech-bubble:after {
 	content: '';
 	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 44px solid transparent;
-	border-top-color: #fff;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -22px;
-	margin-bottom: -44px;
-}
-
-/* --------------------------------------------------------------------------
-   17. Responsive Adjustments
-   -------------------------------------------------------------------------- */
-@media (orientation: portrait) {
-  .viewer { width: 100%; max-width: none; margin: 0 0 10px; }
-  .content { margin-left: 0; margin-bottom: 10px; }
-  .footer { margin-top: 12px; }
-  .sidebar {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-    max-height: none;
-    padding: 0;
-    top: 0;
-  }
-  .menu-toggle { display: block; }
-  .sidebar nav ul,
-  .sidebar h2 { display: none; margin-top: 1rem; }
-  .sidebar.nav-open nav ul,
-  .sidebar.nav-open nav h2 { display: flex; flex-direction: column; }
-  .sidebar .blog li a { text-align: center; }
-  .blog-section { display: none; }
-  .socials { display: none; }
-  .title-bar {
-    position: relative;
-    width: 100%;
-    top: 0;
-  }
-  .window-content { padding: 20px; }
-  .speech-bubble {
-    position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .speech-bubble:after {
-	content: '';
-	position: absolute;
 	top: 0;
-	left: 50%;
+	left: 20%;
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
@@ -898,4 +911,86 @@ a:hover {
 	margin-top: -20px;
 }
 
+/* --------------------------------------------------------------------------
+   17. Responsive Adjustments
+   -------------------------------------------------------------------------- */
+
+@media (orientation: portrait) {
+  /* Adjust layout for portrait orientation */
+  .background {
+    min-height:100% 
+  }
+
+  /* Change the viewer width to fill more of the screen */
+  .viewer {
+    width: 90%;
+    max-width: none;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Reduce padding of content to make better use of space */
+  .content {
+    margin-left: 0;
+    order: 1;
+    padding-bottom: 0;
+  }
+
+  /* Adjust footer position */
+  .footer {
+    margin-top: 12px; 
+  }
+
+  /* Move sidebar to the bottom and fill the width (not technically a sidebar anymore) */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    top: 0;
+    order: 2;
+    margin-bottom: 15px;
+  }
+
+  /* Hide socials buttons */
+  .socials {
+    display: none;
+  }
+
+  /* Change margin of navigation */
+  .navigation {
+    margin: 1rem;
+  }
+
+  /* Hide the welcome text */
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar .blog li a {
+    text-align: center;
+  }
+
+  .title-bar {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+
+  /* Ensure window fills available page if content doesn't overflow */
+  .window {
+    min-height: calc(var(--screen-height) - var(--title-bar-height) - var(--footer-height) - var(--sidebar-height) - var(--title-height));
+  }
+
+  .window-content {
+    padding: 10px;
+    padding-bottom: 10px;
+    min-height: calc(var(--screen-height) - var(--title-bar-height) - var(--footer-height) - var(--sidebar-height) - var(--title-height));
+  }
+
+  /* Decrease size of home page image */
+  .home-container .image {
+    width:60%;
+  }
 }
