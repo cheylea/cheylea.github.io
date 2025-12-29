@@ -36,7 +36,7 @@
     <div class="background">
         <div class="viewer">
             <div class="sidebar">
-               <button class="menu-toggle">☰</button>
+              <div class="navigation">
                <nav>
                 <h2>✿Welcome!❀</h2>
                 <ul>
@@ -47,7 +47,6 @@
                   <li><a href="/blog">Blog</a></li>
                 </ul>
                </nav>
-               <div class="navigation">
                <div class="blog-section">
                  <p class="inbox-title">📥 From the blog...</p>
                  <div class="inbox-list">
@@ -61,6 +60,16 @@
                      <p class="inbox-snippet">What are you grateful for? 🌸
 
 </p>
+                     
+                   </div>
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">13 Oct 2025</span>
+                     <a href="/blogs/20251013_starting_over.html" class="inbox-subject" style="cursor: pointer;">
+                       Knowing when to start over (aka My Gratitude Journal)
+                     </a>
+                     
+                     <p class="inbox-snippet">In the last year or two I’ve bee...</p>
                      
                    </div>
                    
@@ -101,7 +110,6 @@
                      <i class="fas fa-flag"></i>
                    </a>
                  </div>
-
             </div>
             <div class="content">
             <div class="window">
@@ -205,15 +213,16 @@
     const sidebarWidth = sidebar.offsetWidth;
     document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
 
+    const sidebarHeight = sidebar.offsetHeight;
+    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
     document.documentElement.style.setProperty('--title-bar-height', `${titleBarHeight}px`);
 
-    const toggleButton = document.querySelector('.menu-toggle');
+    const screenHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
 
-    toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('nav-open');
-    });
 
     const companyListItems = document.querySelectorAll('.experience-list li');
             const experienceDivs = document.querySelectorAll('.experience-body > div');

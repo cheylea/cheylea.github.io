@@ -36,7 +36,7 @@
     <div class="background">
         <div class="viewer">
             <div class="sidebar">
-               <button class="menu-toggle">☰</button>
+              <div class="navigation">
                <nav>
                 <h2>✿Welcome!❀</h2>
                 <ul>
@@ -47,7 +47,6 @@
                   <li><a href="/blog">Blog</a></li>
                 </ul>
                </nav>
-               <div class="navigation">
                <div class="blog-section">
                  <p class="inbox-title">📥 From the blog...</p>
                  <div class="inbox-list">
@@ -61,6 +60,16 @@
                      <p class="inbox-snippet">What are you grateful for? 🌸
 
 </p>
+                     
+                   </div>
+                   
+                   <div class="inbox-item">
+                     <span class="inbox-date">13 Oct 2025</span>
+                     <a href="/blogs/20251013_starting_over.html" class="inbox-subject" style="cursor: pointer;">
+                       Knowing when to start over (aka My Gratitude Journal)
+                     </a>
+                     
+                     <p class="inbox-snippet">In the last year or two I’ve bee...</p>
                      
                    </div>
                    
@@ -101,7 +110,6 @@
                      <i class="fas fa-flag"></i>
                    </a>
                  </div>
-
             </div>
             <div class="content">
             <div class="window">
@@ -132,7 +140,8 @@
 <div class="experience">
             <div class="experience-list">
                 <ul>
-                    <li class="active" data-target="scc">Southampton City Council</li>
+                    <li class="active" data-target="wd">Workdry</li>
+                    <li data-target="scc">Southampton City Council</li>
                     <li data-target="tando">Tando</li>
                     <li data-target="cl">ClearLoans</li>
                     <li data-target="onefeed">Onefeed</li>
@@ -143,9 +152,13 @@
                 </ul>
             </div>
             <div class="experience-body">
-                <div id="scc" style="display: block;">
-                  <h2>Work Experience at Southampton City Council, present</h2>
-                  <p><b>Principal Data Architect (present):</b> Working with various service areas across the council to design and implement data solutions that allow for robust and efficient reporting.</p>
+                <div id="wd" style="display: block;">
+                  <h2>Work Experience at Workdry, present</h2>
+                  <p>Recently started at Workdry in December 2025 as Power BI Lead.</p>
+                </div>
+                <div id="scc" style="display: none;">
+                  <h2>Work Experience at Southampton City Council, 2025</h2>
+                  <p><b>Principal Data Engineer:</b> Working with various service areas across the council to design and implement data solutions that allow for robust and efficient reporting. Led the Data Warehouse project and five-person Data Engineering team.</p>
                   <p><b>Principal Data Analyst (Adult Social Care):</b> Business partner to adult social care, managing a team of up to three to deliver data insight to the wider business. Responsibilities include building within the social care Data Mart, producing Power BI dashboards across the business, and advising on business process requirements for accurate data capture to power statutory returns. </p>
                   <p><b>Business Analyst:</b> Working on a long-term Data Migration project to upgrade the Client Management System for the Social Care workstreams, focusing on Adult Social Care requirements. This involves working with many stakeholders, including consultants, data analysts, project managers, developers and more.</p>
                </div>
@@ -213,15 +226,16 @@
     const sidebarWidth = sidebar.offsetWidth;
     document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
 
+    const sidebarHeight = sidebar.offsetHeight;
+    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
     document.documentElement.style.setProperty('--title-bar-height', `${titleBarHeight}px`);
 
-    const toggleButton = document.querySelector('.menu-toggle');
+    const screenHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
 
-    toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('nav-open');
-    });
 
     const companyListItems = document.querySelectorAll('.experience-list li');
             const experienceDivs = document.querySelectorAll('.experience-body > div');
