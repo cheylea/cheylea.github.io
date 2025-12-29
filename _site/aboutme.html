@@ -107,9 +107,9 @@
                   <img src="../static/images/cheylea_favicon.png" alt="Favicon" width="24" height="24">
                   <p>About Me</p>
                   <div class="title-bar-buttons">
-                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'">–</button>
-                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'" style="font-size: 16px;">☐</button>
-                    <button class="title-bar-button" title="Back to home" onclick="document.location='../index.html'">×</button>
+                    <button class="title-bar-button" title="Back to home" onclick="shrinkWindow()">–</button>
+                    <button class="title-bar-button" title="Meow?" onclick="summonBasil()" style="font-size: 16px;">☐</button>
+                    <button class="title-bar-button" title="Close" onclick="playErrorAndShake()">×</button>
                     </div>
                 </div>
                 <div class="window-content">
@@ -208,7 +208,7 @@
       <!-- Footer
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div class="footer">
-        <a href="https://www.google.co.uk" class="start-link">
+        <a href="/bluescreen" class="start-link">
         <div class="start-button"></div>
         </a>
          <!-- Add footer text with link -->
@@ -260,5 +260,55 @@
                 });
             });
     
+    // Generated using ChatGPT
+    function playErrorAndShake() {
+    const sound = new Audio('static/sounds/error.mp3');
+    sound.play();
+
+    const windowEl = document.querySelector('.title-bar') || document.body;
+    windowEl.classList.add('shake');
+
+    // remove class after animation ends
+    setTimeout(() => {
+      windowEl.classList.remove('shake');
+      // then redirect
+      window.location.href = '../index.html';
+    }, 600); // wait a bit longer than animation
+  }
+
+  function summonBasil() {
+    const meow = new Audio('static/sounds/meow.mp3');
+    meow.play();
+  if (document.querySelector('.basil')) return;
+  const cat = document.createElement('img');
+  cat.src = 'static/images/basil.JPEG';
+  cat.className = 'basil';
+  document.body.appendChild(cat);
+
+  setTimeout(() => {
+    document.addEventListener('click', removeBasil, { once: true });
+  }, 100);
+  }
+
+  function removeBasil() {
+    const cat = document.querySelector('.basil');
+    if (cat) cat.remove();
+  }
+
+  function shrinkWindow() {
+    const window = document.querySelector('.window');
+    window.style.transform = 'scale(0.01)';
+
+    setTimeout(() => {
+    document.addEventListener('click', restoreWindow, { once: true });
+  }, 100);
+  }
+
+  function restoreWindow() {
+    const window = document.querySelector('.window');
+    window.style.transform = 'scale(1)';
+    location.reload();
+  }
+
    </script>
 </html>

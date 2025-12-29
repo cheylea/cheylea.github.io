@@ -1,0 +1,17 @@
+body {
+    margin: 20px;
+    background-color: #0000FF;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 3vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: min(50%, 400px);
+    height: auto;
+}
