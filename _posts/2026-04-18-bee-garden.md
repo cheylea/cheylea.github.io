@@ -12,7 +12,7 @@ If you'd like to skip the blog and get straight to testing / feedback, see the l
 
 I would love for you to test and feedback on my game! Please download it below to play or play directly on my website! Then please fill in the feedback form with any ideas, bugs or suggestions.
 
-* [Play on my website!](../bee-garden.html)
+* [Play on my website!](../games/bee-garden/BeeGarden.html)
 
 * [Download Bee Garden for Windows Desktop](https://drive.google.com/uc?export=download&id=1OIbDamsLvwVRkiLMBVA8h4egU7kw02Ft)
 
