@@ -17,6 +17,7 @@
     14. About Me
     15. Home Page & Speech Bubble
     16. Responsive Adjustments
+    17. Game Window
   
    ========================================================================== */
 
@@ -1019,4 +1020,23 @@ a:hover {
   .home-container .image {
     width:60%;
   }
+}
+
+/* --------------------------------------------------------------------------
+   18. Game Window
+   -------------------------------------------------------------------------- */
+
+.game-window {
+  width: 648px;
+  height: 1152px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.game-window iframe {
+  width: 648px;
+  height: 1152px;
+  border: 0;
+  display: block;
 }

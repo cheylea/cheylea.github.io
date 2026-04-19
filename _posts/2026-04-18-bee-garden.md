@@ -4,6 +4,20 @@ title: "Making Bee Garden"
 date: 2026-04-18 00:15:00 +0100
 ---
 
+How I created my first ever game in Godot!
+
+If you'd like to skip the blog and get straight to testing / feedback, see the links first.
+
+## Testing
+
+I would love for you to test and feedback on my game! Please download it below to play or play directly on my website! Then please fill in the feedback form with any ideas, bugs or suggestions.
+
+* [Play on my website!](../bee-garden.html)
+
+* [Download Bee Garden for Windows Desktop](https://drive.google.com/uc?export=download&id=1OIbDamsLvwVRkiLMBVA8h4egU7kw02Ft)
+
+[Fill in this feedback form!](https://forms.gle/HB91D9NPjMQ2yvQDA)
+
 ## Background
 
 A little while ago in my quest to my phone usage, I got an iPad Mini. Sounds counter intuitive, but bear with me. By moving my apps and distractions to the iPad and blocking them on my phone it gave me extra friction to really think. This allows me to consider do I really want to do the thing and go to the effort of getting the iPad instead or was I just opening it out of habit.
@@ -103,12 +117,6 @@ Below is a short video demonstrating the game in action.
     allowfullscreen>
   </iframe>
 </div>
-
-## Testing
-
-I would love for you to test and feedback on my game! Please download it below to play and fill in the feedback form with any ideas, bugs or suggestions.
-
-[Download Bee Garden for Windows Desktop](https://drive.google.com/uc?export=download&id=1OIbDamsLvwVRkiLMBVA8h4egU7kw02Ft)
 
 ## Conclusion
 
