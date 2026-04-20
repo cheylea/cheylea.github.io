@@ -8,6 +8,8 @@ How I created my first ever game in Godot!
 
 If you'd like to skip the blog and get straight to testing / feedback, see the links first.
 
+![Final Bee Garden Title](../static/images/bee-garden-final-title.PNG)
+
 ## Testing
 
 I would love for you to test and feedback on my game! Please download it below to play or play directly on my website! Then please fill in the feedback form with any ideas, bugs or suggestions.
@@ -20,18 +22,18 @@ I would love for you to test and feedback on my game! Please download it below t
 
 ## Background
 
-A little while ago in my quest to my phone usage, I got an iPad Mini. Sounds counter intuitive, but bear with me. By moving my apps and distractions to the iPad and blocking them on my phone it gave me extra friction to really think. This allows me to consider do I really want to do the thing and go to the effort of getting the iPad instead or was I just opening it out of habit.
+A little while ago in my quest to reduce my phone usage, I got an iPad Mini. Sounds counter intuitive, but bear with me. By moving my apps and distractions to the iPad and blocking them on my phone it gave me extra friction to really think. This allows me to consider do I really want to do the thing and go to the effort of getting the iPad instead or was I just opening it out of habit.
 
 What this also unlocked for me was the ability to use a pen stylus for writing and drawing. Back in 2025 I wanted cross stitch a penny black stamp for my partner’s dad for Christmas. A pattern for this didn’t exist, so I used my iPad to trace out a relief image of the stamp and then used an app to create a cross-stitch pattern. The Christmas present was a hit, but I also discovered a new mindfulness activity – making cross stitch patterns.
 
 ![Penny Black Original Stamp](../static/images/bee-garden-penny-black-stamp.JPEG)
 ![Penny Black in Relief](../static/images/bee-garden-penny-black.PNG)
-![Penny Black Pattern](../static/images/missing.JPEG)
+![Penny Black Pattern](../static/images/bee-garden-stamp-pattern.jpeg)
 ![Penny Black in Relief](../static/images/bee-garden-penny-black-stitched.JPEG)
 
 I’ve since made a few more patterns (which I shall keep a secret as they are also gifts) but I started to make a few extra patterns to experiment with possibly creating patterns to sell online. This started with a series of mini flowers, originally intended to do a mini flower pattern for each birth month flower (which I may still do). But this did end up sending me on a slightly different path.
 
-INSERT IMAGE OF FLOWER PATTERNS (ORIGINAL)
+![Flower Pattern Drafts](../static/images/bee-garden-flower-patterns.jpeg)
 
 For those not familiar, essentially to make a cross stitch pattern you take an image and then render the image using tiny squares which make each stitch you eventually sew. However, this is also an art form in itself called pixel art. You may have seen the pixel art of my avatar on this website in fact! Whereas before I painstakingly created that on an online app with my mouse, I am now able to draw using my iPad. I can create a pixel art image and easily convert it into a cross-stitch pattern. I found though, since cross stitch takes quite a long time, I could make many patterns that I would likely never have the time to cross stitch and yet I really was enjoying the drawing. Hold that thought for now…
 
