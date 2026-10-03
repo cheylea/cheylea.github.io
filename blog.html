@@ -6,6 +6,11 @@ title: "Blog"
 <div class="blog-section" style="display: block;">
   {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
   <p class="inbox-title">📥 My Blog Posts</p>
+  <i>Want to get notified when I release new blog posts?
+      <br>
+      Sign up <a href="https://forms.cloud.microsoft/r/zWQbDvtgEv" target="_blank">here</a>!</i>
+      <br>
+      <br>
   {% for y in years %}
     
     <p class="inbox-title">{{ y.name }}</p>
