@@ -24,89 +24,12 @@
    <body>
     <!-- Top Title
     ––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <h1 class="title">
-        <div class="aurora">
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-        </div>
-        CHEYLEA HOPKINSON
-    </h1>
+
     <div class="background">
         <div class="viewer">
-            <div class="sidebar">
-              <div class="navigation">
-               <nav>
-                <h2>✿Welcome!❀</h2>
-                <ul>
-                  <li><a href="/">🏠︎</a></li>
-                  <li><a href="/aboutme">About Me</a></li>
-                  <li><a href="/experience">CV & Experience</a></li>
-                  <li><a href="/projects">Code Projects</a></li>
-                  <li><a href="/blog">Blog</a></li>
-                </ul>
-               </nav>
-               <div class="blog-section">
-                 <p class="inbox-title">📥 From the blog...</p>
-                 <div class="inbox-list">
-                   {% for post in site.posts limit:3 %}
-                   <div class="inbox-item">
-                     <span class="inbox-date">{{ post.date | date: "%-d %b %Y" }}</span>
-                     <a href="{{ post.url | relative_url }}" class="inbox-subject" style="cursor: pointer;">
-                       {{ post.title }}
-                     </a>
-                     {% if post.excerpt %}
-                     <p class="inbox-snippet">{{ post.excerpt | strip_html | truncate: 35, "..." }}</p>
-                     {% endif %}
-                   </div>
-                   {% endfor %}
-                 </div>
-               </div>
-               </div>
-               <div class="socials">
-                   <a title="LinkedIn" href="https://www.linkedin.com/in/cheyleahopkinson/" target="_blank" class="social-buttons">
-                     <i class="fab fa-linkedin"></i>
-                   </a>
-                   <a title="GitHub" href="https://github.com/cheylea" target="_blank" class="social-buttons">
-                     <i class="fab fa-github"></i>
-                   </a>
-                   <a title="Download CV" href="files/Cheylea Hopkinson - Website Version.pdf" download class="social-buttons">
-                     <i class="fas fa-file-download"></i>
-                   </a>
-                   <a title="Ultimate Flaggle" href="https://www.ultimateflaggle.co.uk" target="_blank" class="social-buttons">
-                     <i class="fas fa-flag"></i>
-                   </a>
-                 </div>
-            </div>
-            <div class="content">
-            <div class="window">
-                <div class="title-bar">
-                  <img src="../static/images/cheylea_favicon.png" alt="Favicon" width="24" height="24">
-                  <p>{{ page.title }}</p>
-                  <div class="title-bar-buttons">
-                    <button class="title-bar-button" title="Back to home" onclick="shrinkWindow()">–</button>
-                    <button class="title-bar-button" title="Meow?" onclick="summonBasil()" style="font-size: 16px;">☐</button>
-                    <button class="title-bar-button" title="Close" onclick="playErrorAndShake()">×</button>
-                    </div>
-                </div>
-                <div class="window-content">
-                  {{ content }}
-                </div>
-              </div>
-            </div>
+        {{ content }}
         </div>
     </div>
-
-      <!-- Footer
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div class="footer">
-        <a href="/bluescreen" class="start-link">
-        <div class="start-button"></div>
-        </a>
-         <!-- Add footer text with link -->
-         <p>All rights reserved © Cheylea Hopkinson 2025.</p>
-      </div>
       <!-- End Document
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -119,13 +42,8 @@
     const footer = document.querySelector('.footer');
     const footerHeight = footer.offsetHeight;
     document.documentElement.style.setProperty('--footer-height', `${footerHeight}px`);
-
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarWidth = sidebar.offsetWidth;
-    document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
-
-    const sidebarHeight = sidebar.offsetHeight;
-    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+    const footerWidth = footer.offsetWidth;
+    document.documentElement.style.setProperty('--footer-width', `${footerWidth}px`);
 
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
@@ -133,6 +51,8 @@
 
     const screenHeight = window.innerHeight;
     document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
+    const screenWidth = window.innerWidth;
+    document.documentElement.style.setProperty('--screen-width', `${screenWidth}px`);
 
 
     const companyListItems = document.querySelectorAll('.experience-list li');
@@ -188,20 +108,53 @@
     if (cat) cat.remove();
   }
 
-  function shrinkWindow() {
-    const window = document.querySelector('.window');
-    window.style.transform = 'scale(0.01)';
 
-    setTimeout(() => {
-    document.addEventListener('click', restoreWindow, { once: true });
-  }, 100);
+  function maximizeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.toggle('maximized');
   }
 
-  function restoreWindow() {
-    const window = document.querySelector('.window');
-    window.style.transform = 'scale(1)';
-    location.reload();
+  function minimizeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('maximized');
+    app.classList.add('minimized');
   }
+
+  function restoreApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('minimized', 'closed');
+  }
+
+  function closeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('maximized');
+    app.classList.add('closed');
+  }
+
+  function openApp(id) {
+  const app = document.getElementById(id);
+  if (!app) return;
+
+  // Hide any currently maximised window
+  document.querySelectorAll('.window-viewer.maximized')
+    .forEach(win => win.classList.remove('maximized'));
+
+  // Reopen and maximise the requested window
+  app.classList.remove('minimized', 'closed');
+  app.classList.add('maximized');
+
+  // Scroll its content to the top
+  app.querySelector('.window-content')?.scrollTo(0, 0);
+}
+
 
    </script>
 </html>

@@ -2,58 +2,107 @@
 layout: base
 ---
 
+<!-- Main title bar -->
+<div class="title-bar">
+  <img
+    src="/static/images/cheylea_favicon.png"
+    alt=""
+    width="24"
+    height="24"
+  >
 
-<main class="post-main">
-  <article class="post">
-    <br>
-    <p class="post-date">
-      {% assign d = post.date | date: "%-d" | plus: 0 %}
-      {{ page.date | date: "%-d" }} {{ page.date | date: "%B %Y" }}
-      
-    </p>
-    <br>
-    <div class="title-bar-buttons">
-        <button class="title-bar-button" title="Back to blog list" onclick="document.location='../blog.html'" style="font-size: 14px;">🡸</button>
-    </div>
-    <br>
-    <div class="post-content">
-      {{ content }}
-      <br>
-      <i>Want to get notified when I release new blog posts like this one?
-      <br>
-      Sign up <a href="https://forms.cloud.microsoft/r/zWQbDvtgEv" target="_blank">here</a>!</i>
-      <br>
-    </div>
-    
-    <br>
-      
+  <p>{{ page.title }}</p>
 
-    <div class="main">
-      <h2>Leave a comment</h2>
+  <div class="title-bar-buttons">
+    <button class="title-bar-button"
+            title="Back to home"
+            onclick="window.location.href='/'">–</button>
+
+    <button class="title-bar-button"
+            title="Meow?"
+            onclick="summonBasil()">☐</button>
+
+    <button class="title-bar-button"
+            title="Close"
+            onclick="playErrorAndShake()">×</button>
+  </div>
+</div>
+
+<!-- Desktop -->
+<div class="desktop post-desktop">
+
+  <section class="window-viewer post-window">
+
+    <div class="window-content">
+      <div class="title-bar-buttons">
+        <button class="title-bar-button"
+                title="Back to blog"
+                onclick="window.location.href='/#blog'">←</button>
       </div>
-      <section id="utterances-comments"></section>
-  </article>
-  <!-- Comments
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-         <script>
-            'use strict';
-          
-            (function() {
-              var commentContainer = document.querySelector('#utterances-comments');
-          
-              if (!commentContainer) {
-                return;
-              }
-          
-              var script = document.createElement('script');
-              script.setAttribute('src', 'https://utteranc.es/client.js');
-              script.setAttribute('repo', 'cheylea/cheylea.github.io');
-              script.setAttribute('issue-term', 'url');
-              script.setAttribute('label', 'blog-comment');
-              script.setAttribute('theme', 'dark-blue');
-              script.setAttribute('crossorigin', 'anonymous');
-          
-              commentContainer.appendChild(script);
-            })();
-         </script>
-</main>
+
+      <article class="post">
+
+        <p class="post-date">
+          {{ page.date | date: "%-d %B %Y" }}
+        </p>
+
+        <div class="post-content">
+          {{ content }}
+        </div>
+
+        <hr>
+
+        <p>
+          <i>
+            Want to get notified when I release new blog posts?
+            Sign up
+            <a href="https://forms.cloud.microsoft/r/zWQbDvtgEv"
+               target="_blank"
+               rel="noopener noreferrer">here</a>!
+          </i>
+        </p>
+
+        <h2>Leave a comment</h2>
+        <section id="utterances-comments"></section>
+
+      </article>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- Taskbar -->
+<div class="taskbar">
+  <div class="taskbar-apps">
+    <a href="/" class="start-link">
+      <div class="start-button"></div>
+    </a>
+
+    <a href="/#blog" class="taskbar-button">
+      📥 Blog
+    </a>
+  </div>
+
+  <div class="taskbar-copyright">
+    <p>© Cheylea Hopkinson 2026</p>
+  </div>
+</div>
+
+<!-- Comments -->
+<script>
+  (function () {
+    const container = document.querySelector('#utterances-comments');
+    if (!container) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'cheylea/cheylea.github.io');
+    script.setAttribute('issue-term', 'url');
+    script.setAttribute('label', 'blog-comment');
+    script.setAttribute('theme', 'dark-blue');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    container.appendChild(script);
+  })();
+</script>

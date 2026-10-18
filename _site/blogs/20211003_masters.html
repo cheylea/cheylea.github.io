@@ -24,170 +24,121 @@
    <body>
     <!-- Top Title
     ––––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <h1 class="title">
-        <div class="aurora">
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-            <div class="aurora__item"></div>
-        </div>
-        CHEYLEA HOPKINSON
-    </h1>
+
     <div class="background">
         <div class="viewer">
-            <div class="sidebar">
-              <div class="navigation">
-               <nav>
-                <h2>✿Welcome!❀</h2>
-                <ul>
-                  <li><a href="/">🏠︎</a></li>
-                  <li><a href="/aboutme">About Me</a></li>
-                  <li><a href="/experience">CV & Experience</a></li>
-                  <li><a href="/projects">Code Projects</a></li>
-                  <li><a href="/blog">Blog</a></li>
-                </ul>
-               </nav>
-               <div class="blog-section">
-                 <p class="inbox-title">📥 From the blog...</p>
-                 <div class="inbox-list">
-                   
-                   <div class="inbox-item">
-                     <span class="inbox-date">3 Oct 2026</span>
-                     <a href="/blogs/20261003_i-contributed-a-verse.html" class="inbox-subject" style="cursor: pointer;">
-                       I Contributed a Verse
-                     </a>
-                     
-                     <p class="inbox-snippet">For the first time in my whole l...</p>
-                     
-                   </div>
-                   
-                   <div class="inbox-item">
-                     <span class="inbox-date">18 Apr 2026</span>
-                     <a href="/blogs/20260418_bee-garden.html" class="inbox-subject" style="cursor: pointer;">
-                       Making Bee Garden
-                     </a>
-                     
-                     <p class="inbox-snippet">How I created my first ever game...</p>
-                     
-                   </div>
-                   
-                   <div class="inbox-item">
-                     <span class="inbox-date">24 Nov 2025</span>
-                     <a href="/blogs/20251124_starting_over.html" class="inbox-subject" style="cursor: pointer;">
-                       Gratitude Journal (and knowing when to quit)
-                     </a>
-                     
-                     <p class="inbox-snippet">What are you grateful for? 🌸
+        <!-- Main title bar -->
+<div class="title-bar">
+  <img
+    src="/static/images/cheylea_favicon.png"
+    alt=""
+    width="24"
+    height="24"
+  >
 
-</p>
-                     
-                   </div>
-                   
-                 </div>
-               </div>
-               </div>
-               <div class="socials">
-                   <a title="LinkedIn" href="https://www.linkedin.com/in/cheyleahopkinson/" target="_blank" class="social-buttons">
-                     <i class="fab fa-linkedin"></i>
-                   </a>
-                   <a title="GitHub" href="https://github.com/cheylea" target="_blank" class="social-buttons">
-                     <i class="fab fa-github"></i>
-                   </a>
-                   <a title="Download CV" href="files/Cheylea Hopkinson - Website Version.pdf" download class="social-buttons">
-                     <i class="fas fa-file-download"></i>
-                   </a>
-                   <a title="Ultimate Flaggle" href="https://www.ultimateflaggle.co.uk" target="_blank" class="social-buttons">
-                     <i class="fas fa-flag"></i>
-                   </a>
-                 </div>
-            </div>
-            <div class="content">
-            <div class="window">
-                <div class="title-bar">
-                  <img src="../static/images/cheylea_favicon.png" alt="Favicon" width="24" height="24">
-                  <p>Masters Blog Week Seven - Group Projects</p>
-                  <div class="title-bar-buttons">
-                    <button class="title-bar-button" title="Back to home" onclick="shrinkWindow()">–</button>
-                    <button class="title-bar-button" title="Meow?" onclick="summonBasil()" style="font-size: 16px;">☐</button>
-                    <button class="title-bar-button" title="Close" onclick="playErrorAndShake()">×</button>
-                    </div>
-                </div>
-                <div class="window-content">
-                  <main class="post-main">
-  <article class="post">
-    <br>
-    <p class="post-date">
-      
-      3 October 2021
-      
-    </p>
-    <br>
-    <div class="title-bar-buttons">
-        <button class="title-bar-button" title="Back to blog list" onclick="document.location='../blog.html'" style="font-size: 14px;">🡸</button>
-    </div>
-    <br>
-    <div class="post-content">
-      <p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
+  <p>Masters Blog Week Seven - Group Projects</p>
+
+  <div class="title-bar-buttons">
+    <button class="title-bar-button"
+            title="Back to home"
+            onclick="window.location.href='/'">–</button>
+
+    <button class="title-bar-button"
+            title="Meow?"
+            onclick="summonBasil()">☐</button>
+
+    <button class="title-bar-button"
+            title="Close"
+            onclick="playErrorAndShake()">×</button>
+  </div>
+</div>
+
+<!-- Desktop -->
+<div class="desktop post-desktop">
+
+  <section class="window-viewer post-window">
+
+    <div class="window-content">
+      <div class="title-bar-buttons">
+        <button class="title-bar-button"
+                title="Back to blog"
+                onclick="window.location.href='/#blog'">←</button>
+      </div>
+
+      <article class="post">
+
+        <p class="post-date">
+          3 October 2021
+        </p>
+
+        <div class="post-content">
+          <p>Note from the author 2024: This is an archived blog from a newsletter I sent to family and friends about my studies, insanely thinking I could somehow keep it up weekly. So take with a pinch of salt! It’s interesting to look back on where things were so many years ago, and also how hilariously formal some of these blogs are.</p>
 
 <p><em>This also features a reference to blockchain and how I would never want to do a piece of work on it…interesting considering how my dissertation went.</em></p>
 
 <p><a href="/archived/20211003.html">Link to original blog newsletter here</a>.</p>
 
-      <br>
-      <i>Want to get notified when I release new blog posts like this one?
-      <br>
-      Sign up <a href="https://forms.cloud.microsoft/r/zWQbDvtgEv" target="_blank">here</a>!</i>
-      <br>
+        </div>
+
+        <hr>
+
+        <p>
+          <i>
+            Want to get notified when I release new blog posts?
+            Sign up
+            <a href="https://forms.cloud.microsoft/r/zWQbDvtgEv"
+               target="_blank"
+               rel="noopener noreferrer">here</a>!
+          </i>
+        </p>
+
+        <h2>Leave a comment</h2>
+        <section id="utterances-comments"></section>
+
+      </article>
+
     </div>
-    
-    <br>
-      
+  </section>
 
-    <div class="main">
-      <h2>Leave a comment</h2>
-      </div>
-      <section id="utterances-comments"></section>
-  </article>
-  <!-- Comments
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-         <script>
-            'use strict';
-          
-            (function() {
-              var commentContainer = document.querySelector('#utterances-comments');
-          
-              if (!commentContainer) {
-                return;
-              }
-          
-              var script = document.createElement('script');
-              script.setAttribute('src', 'https://utteranc.es/client.js');
-              script.setAttribute('repo', 'cheylea/cheylea.github.io');
-              script.setAttribute('issue-term', 'url');
-              script.setAttribute('label', 'blog-comment');
-              script.setAttribute('theme', 'dark-blue');
-              script.setAttribute('crossorigin', 'anonymous');
-          
-              commentContainer.appendChild(script);
-            })();
-         </script>
-</main>
+</div>
 
-                </div>
-              </div>
-            </div>
+<!-- Taskbar -->
+<div class="taskbar">
+  <div class="taskbar-apps">
+    <a href="/" class="start-link">
+      <div class="start-button"></div>
+    </a>
+
+    <a href="/#blog" class="taskbar-button">
+      📥 Blog
+    </a>
+  </div>
+
+  <div class="taskbar-copyright">
+    <p>© Cheylea Hopkinson 2026</p>
+  </div>
+</div>
+
+<!-- Comments -->
+<script>
+  (function () {
+    const container = document.querySelector('#utterances-comments');
+    if (!container) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://utteranc.es/client.js';
+    script.setAttribute('repo', 'cheylea/cheylea.github.io');
+    script.setAttribute('issue-term', 'url');
+    script.setAttribute('label', 'blog-comment');
+    script.setAttribute('theme', 'dark-blue');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    container.appendChild(script);
+  })();
+</script>
+
         </div>
     </div>
-
-      <!-- Footer
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div class="footer">
-        <a href="/bluescreen" class="start-link">
-        <div class="start-button"></div>
-        </a>
-         <!-- Add footer text with link -->
-         <p>All rights reserved © Cheylea Hopkinson 2025.</p>
-      </div>
       <!-- End Document
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
@@ -200,13 +151,8 @@
     const footer = document.querySelector('.footer');
     const footerHeight = footer.offsetHeight;
     document.documentElement.style.setProperty('--footer-height', `${footerHeight}px`);
-
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarWidth = sidebar.offsetWidth;
-    document.documentElement.style.setProperty('--sidebar-width', `${sidebarWidth}px`);
-
-    const sidebarHeight = sidebar.offsetHeight;
-    document.documentElement.style.setProperty('--sidebar-height', `${sidebarHeight}px`);
+    const footerWidth = footer.offsetWidth;
+    document.documentElement.style.setProperty('--footer-width', `${footerWidth}px`);
 
     const titleBar = document.querySelector('.title-bar');
     const titleBarHeight = Math.round(titleBar.offsetHeight); // round to whole px
@@ -214,6 +160,8 @@
 
     const screenHeight = window.innerHeight;
     document.documentElement.style.setProperty('--screen-height', `${screenHeight}px`);
+    const screenWidth = window.innerWidth;
+    document.documentElement.style.setProperty('--screen-width', `${screenWidth}px`);
 
 
     const companyListItems = document.querySelectorAll('.experience-list li');
@@ -269,20 +217,53 @@
     if (cat) cat.remove();
   }
 
-  function shrinkWindow() {
-    const window = document.querySelector('.window');
-    window.style.transform = 'scale(0.01)';
 
-    setTimeout(() => {
-    document.addEventListener('click', restoreWindow, { once: true });
-  }, 100);
+  function maximizeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.toggle('maximized');
   }
 
-  function restoreWindow() {
-    const window = document.querySelector('.window');
-    window.style.transform = 'scale(1)';
-    location.reload();
+  function minimizeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('maximized');
+    app.classList.add('minimized');
   }
+
+  function restoreApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('minimized', 'closed');
+  }
+
+  function closeApp(id) {
+    const app = document.getElementById(id);
+    if (!app) return;
+
+    app.classList.remove('maximized');
+    app.classList.add('closed');
+  }
+
+  function openApp(id) {
+  const app = document.getElementById(id);
+  if (!app) return;
+
+  // Hide any currently maximised window
+  document.querySelectorAll('.window-viewer.maximized')
+    .forEach(win => win.classList.remove('maximized'));
+
+  // Reopen and maximise the requested window
+  app.classList.remove('minimized', 'closed');
+  app.classList.add('maximized');
+
+  // Scroll its content to the top
+  app.querySelector('.window-content')?.scrollTo(0, 0);
+}
+
 
    </script>
 </html>
